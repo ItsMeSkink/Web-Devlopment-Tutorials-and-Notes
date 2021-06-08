@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+            // SYMBOL IS USED FOR CREATING A PRIMITIVE ELEMENT THAT IS ALWAYS UNIQUE IN ITS OWN WAY EVEN THOUGH THEY ARE ALREADY THE SAME
+
+            const symbol1 = Symbol('this is a random string inside a symbol') // symbol is a primitive identifier that means it is not a function/object/undefined/boolean/NaN etc. by default. Symbol is symbol as an identifier
+            console.log(typeof symbol1)
+            console.log(symbol1)
+
+
+            let a = 'random string'
+            let b = 'random string'
+            console.log(a == b) // this would yield true. 
+
+            const symbol2 = Symbol('this is a random string inside a symbol') // this is same as symbol2 but it would not be equal to symbol1 unlike the above case (normal)
+            console.log(symbol1 == symbol2) // this would yield false
+
+
+
+            const symbol3 = Symbol()
+            const symbol4 = Symbol()
+
+            newObject = {} // this initiates that 'newObject' is an Object.
+            newObject[symbol3] = 'Lakshya' // this adds a symbol to the Object. 
+            // if we used object_name.symbol_name, it would define Lakshya as symbol3 variable defination and not a symbol itself
+            newObject[symbol4] = 'Monga'
+
+            
+
+            console.log(newObject)
+            console.log(newObject[symbol3]) // this would print the symbol 'Symbol3' which exists in an object
+            console.log(newObject[symbol4]) // print symbol 'Symbol4'
+
+
+            // __________________________________________________________________________________________
+
+            const symbol5 = Symbol('identifier for symbol3') // the string/anything inside the parenthesis would be the identifier for the particular defination of the string
+            newObject1 = {}
+            newObject1[symbol5] = 'Shourya/Manan'
+            newObject1['randomVariable'] = 'random String for randomVariable' // this is same as newObject1.randomVariable
+            console.log(newObject1) // this would show the symbol along with its identifier in parenthesis
+
+            for (let symbols in newObject1) {
+                console.log(symbols)
+                // symbols are ignored in for in loop
+            }
+
+            console.log(JSON.stringify(newObject1)) // again, symbols are ignored in JSON objects
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

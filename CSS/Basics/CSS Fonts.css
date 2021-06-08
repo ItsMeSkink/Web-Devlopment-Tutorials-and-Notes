@@ -1,0 +1,19 @@
+.websafefont {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* 1 px (for a fnot is 1/96th on an inch) */
+
+.webfonts {
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
+    line-height: 4em;
+    font-style: oblique;
+}
+
+
+/* em unit in line height refers to the multiple of the px in font-size. Which means that X(em) = X * Y (px)  */

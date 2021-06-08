@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+
+    /* 
+    grid-template-columns: 400px 400px 500px;
+     */
+    
+    
+    /* this is to define the specific column of the column in the grid.  */
+
+    /*
+     grid-template-columns: 1fr 2fr 3fr;
+     */
+    
+    /* this will multiply the origin width of the element. for e.g. in this case it is, 300px for each box. 1fr will refer to 300px, 2fr will refer to 600px and so on */
+
+    grid-template-columns: repeat(4, 200px);
+    
+    /* this will set how many columns should be there and the width of these columns  */
+
+    grid-gap: 10px;
+    /* this will set the gap between the elements both in row and column wise. This resembles the margin.  */
+}
+
+.item {
+    height: 200px;
+    width: inherit;
+    /* this will automatically set the  */
+    background-color: red;
+    margin: 4px;
+    border: 3px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+
+}

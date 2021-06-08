@@ -1,0 +1,33 @@
+#top {
+    border: 10px solid red;
+    display: block;
+    width: 1200px;
+    margin: auto;
+}
+
+#kc {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#h3i {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+.box {
+    border: 5px groove yellow;
+    background: green;
+    margin: 6px 0px;
+    padding: 10px;
+    display: inline-block;
+    width: 33%;
+}
+
+.container6 {
+    margin: auto;
+    display: block;
+    width: 1200px;
+}

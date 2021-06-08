@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            function* randomGenerator() {
+                // the '*' symbol is the symbol to create a generator function that would work according to the language
+                let i = 0;
+
+                yield 1 // the yield function only works with generators and it resembles the iterators. it means the incremenetal of value after the function has been called each time
+                yield 2
+                yield 3
+                yield 4
+            }
+
+            let gen1 = randomGenerator()
+            console.log(gen1.next()) // this would print the first value that is given w.r.t to the first yield
+            console.log(gen1.next()) // this would print the next yield value
+            console.log(gen1.next()) // the next() function would print the next value in the console-log
+            console.log(gen1.next()) // along with that, the print would be in form of an objet and it would tell the 'yields' and the 'done' status (true/false)
+            console.log(gen1.next())
+
+
+            function* randomGenerator1() {
+
+                var i = 0 
+
+                while(true){
+                    yield i++
+                    // yield (i++).toString() // this would convert the values into strings
+                } // here the value would keep increasing whenever the function next() is called
+            }
+
+            let gen2 = randomGenerator1()
+
+            console.log(gen2.next()) // the value of this variable would keep increasing according to the function generator
+
+
+            for(r =0 ; r < 10; r++) {
+                console.log(r +'th print value extracted from the object is' ,  gen2.next().value)                
+            } // this 'for' would demonstrate that each time this function is called, the value of 'i' will increase
+
+
+
+        </script>
+    </body>
+</html>

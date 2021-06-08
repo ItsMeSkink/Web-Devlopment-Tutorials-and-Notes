@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            // Regular expressions and Related Functions
+
+            let randomString = 'THIS IS AN EXAMPLE OF A STRING WHICH WILL BE USED TO PROCESS AND DEMONSTRATE THE EXAMPLE FUNCIONS OF randomRegularFunctionLiteral 123 '
+
+
+            let regularFunctionLiteral1 = /randomRegularFunctionLiteral 123/ // this is a Regular Function Literal
+            console.log(regularFunctionLiteral1)
+            console.log(regularFunctionLiteral1.source) // this would give the whole Regular Function Literal in form of String
+
+            // __________________________________________________________________________________________________________________
+            
+            let execfunction1 = regularFunctionLiteral1.exec(randomString)
+            console.log(execfunction1)
+
+            // FUNCTIONS
+            // 1) exec() -> this would either return an array if matched or a null if not matched
+
+            // the whole string that has to be analyzed would be in the parenthesis of the '.exec' function and the string that has to be searched inside that would be before the '.exec'. 
+            // the print woud be regularFunctionLiteral string, the whole string that is being analyzed and the number of characters after which it occur (index)
+            // if there are two same set of characters in the whole string, the last one would be analyzed. 
+
+            console.log('___')
+
+            // __________________________________________________________________________________________________________________
+
+            let regularFunctionLiteral2 = /EXAMPLE/
+            console.log(regularFunctionLiteral2)
+            console.log(regularFunctionLiteral2.source)
+
+            let execfunction2 = regularFunctionLiteral2.exec(randomString)
+            console.log(execfunction2)
+
+            console.log('______')
+
+            //___________________________________________________________________________________________________________________
+
+            regularFunctionLiteral2 = /EXAMPLE/g // the 'g' flag refers to the global aspect flag that instructs the computer to analyze the whole STRING instead of just stop to analyze it after the required set of characters have been found
+            execfunction2 = regularFunctionLiteral2.exec(randomString)
+            console.log(execfunction2)
+            console.log(execfunction2) // this should've print different index value but it is not currently right now!
+
+            console.log('____')
+            // __________________________________________________________________________________________________________________
+
+            regularFunctionLiteral2 = /process/i // the 'i' means caase insensitive which means that it will spot out the word irrespective of its lower or uppercase. in this case the word in the String is CAPITAL but here it still spots out the word
+            execfunction2 = regularFunctionLiteral2.exec(randomString)
+            console.log(execfunction2)
+
+            console.log('___')
+
+            // _____________________________________________________________________________________________________________________
+
+            console.log(execfunction2.input) // this will print the whole string that is being read or being analyzed 
+            console.log(execfunction2.index) // this will print the index number of the word that is to be found in the whole string
+
+            console.log('_______')
+            // ______________________________________________________________________________________________________________________
+
+
+            let regularFunctionLiteral3 = /DEMONSTRATE/
+            let execfunction3 = regularFunctionLiteral3.test(randomString) // this print 'TRUE' or 'FALSE' regarding the existence of the set of characters in the /_/. in this case this will yield true because the word DEMONSTRATE exists in the whole string
+            console.log(execfunction3)
+
+            regularFunctionLiteral3 = /nothing/
+            execfunction3 = regularFunctionLiteral3.test(randomString) // this will yield false because the word 'nothing' does not exist in the whole String
+            console.log(execfunction3)
+
+            console.log('____')
+
+            // __________________________________________________________________________________________________________________
+
+            let regularFunctionLiteral4 = /STRING/
+            let execfunction4 = randomString.match(regularFunctionLiteral4) // this is the same as '.exec()' but the format is different. here the string variable name comes first, then '.match()' and then the name of the Regular Function Interval in the parenthesis
+
+            console.log(execfunction4)
+
+            console.log('____')
+
+            //___________________________________________________________________________________________________________________
+
+            regularFunctionLiteral4 = /EXAMPLE/g
+            execfunction4 = randomString.match(regularFunctionLiteral4) // as the scope of the Regular Function Literal is global, the match function would yield an ARRAY with object in it as much as the number of times the word has repeated in a string. in this case, it was two. so the number of objects displayed would be 2. 
+            console.log(execfunction4)
+
+            console.log('___')
+
+            //_____________________________________________________________________________________________________________________
+
+            let regularFunctionLiteral5 = /WILL/
+            let execfunction5 = randomString.search(regularFunctionLiteral5) // the format of the syntax is same as '.match' and this function would yield either the exact index value of -1. if there is no existence of the word, it would yield -1.
+            console.log(execfunction5)
+
+            console.log('___')
+
+            // __________________________________________________________________________________________________________________
+
+            let regularFunctionLiteral6 = /WILL/
+            let execfunction6 = randomString.replace(regularFunctionLiteral6, '_CAN_') // this will replace the Regular Function word with the one after the comma and return the whole changed String. to change all the same words, we have to use the '/g' flag
+
+            console.log(execfunction6)
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

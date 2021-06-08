@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <button id="button1">BUTTON 1</button>
+        <button id="button2">BUTTON 2</button>
+        <button id="button3">BUTTON 3</button>
+
+
+        <script>
+
+            let button1 = document.getElementById('button1')
+            button1.addEventListener('click', asyncFunction1)
+            let button2 = document.getElementById('button2')
+            button2.addEventListener('click', asyncFunction2)
+            let button3 = document.getElementById('button3')
+            // button3.addEventListener('click', asyncFunction3)
+
+
+
+            function asyncFunction1() {
+
+
+                async function asyncFunction1_1() {
+                    // the async function would return a promise that either the argument/function would be carried out(resolve) or not(reject). 
+                    console.log('THIS IS INSIDE THE ASYNCHRONOUS FUNCTION 1 (1)')
+
+                    return ' this is the returned string from the asyncFunction1   (2)'
+
+                }
+
+                console.log("THIS IS BEFORE CALLING THE asyncFunction1_1  (3)")
+                let asyncFunction = asyncFunction1_1()
+                console.log("THIS IS AFTER CALLING THE asyncFunction1_1  (4)")
+                console.log(asyncFunction)
+                console.log(" THIS IS THE END OF ASYNCHROUNOUS FUNCTION 1  (5)")
+                console.log('THE ORDER OF THE RUN IS 3 1 4 5               (6)')
+                console.log("")
+                // explanation of the order of the prints
+                // 1) before calling would be fired because it happened before the asyncFunction1_1 being called
+                // 2) the function asyncFunction1_1 that -> prints inside the function <- and -> what is being returned (not printing it).  it RETURNS a PROMISE that is RESOLVED
+                // 3) the after calling function because it happens after the asyncFunction1_1
+                // 4) the whole function asyncFunction1_1 is printed which returns a string
+                // 5) the end of the whole file as it is the end 
+
+                console.log("/__________________________/")
+
+            }
+
+            async function asyncFunction2() {
+
+
+                async function asyncFunction2_1() {
+                    console.log('THIS IS INSIDE THE ASYNCHRONOUS FUNCTION 2  (1)')
+
+                    console.log('THIS IS BEFORE FETCHING THE DATA FROM THE GITHUB API  (2)')
+                    const response = await fetch('https://api.github.com/users') // the further code waits for this to happen. in promise it means '.then'. after it is done, next function or '.then' would be fired
+                    console.log('THIS IS AFTER FETCHING THE DATA FROM THE GITHUB API  (3)')
+                    const users = await response.json() // this also return a promise
+                    console.log('this is after reading the data from the GITHUB API in form of JSON (4)')
+                    return ('this is the returned string from the asyncFunction1   (5)', users) // here the promise would be resolved and the output would be all th user objects
+
+
+                }
+
+                console.log('THIS IS BEFORE CALLING THE asyncFunction2_1 (6)')
+                let asyncFunction = asyncFunction2_1()
+                console.log('THIS IS AFTER CALLING THE asyncFunction2_1 (7)')
+                console.log(asyncFunction)
+                asyncFunction.then((data) => {
+                    console.log(data)
+                }) // as the whole 'asyncFunction is a promise '.then' has to be also called. this means what will happen after the asyncFunction2_1 has been run
+                console.log('THIS IS THE END OF THE FILE FUNCTION (8)')
+
+
+            }
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

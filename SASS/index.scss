@@ -1,0 +1,86 @@
+@import "./partial";
+@import "./variables";
+
+body {
+    background-color: $bluecolor;
+}
+
+#title {
+    font-size: map-get($fontsizes, title);
+}
+#detailcontent {
+    font-size: map-get($fontsizes, detailcontent);
+}
+#briefcontent {
+    font-size: map-get($fontsizes, briefcontent);
+}
+
+@function font-size($font-size) {
+    
+    @return map-get($fontsizes, $font-size);
+} // this is a basic JS function which is used in SCSS. hee it is specifically used as a shorthand to map-get for $fontsizes. $font-size is the constructor variable
+
+@mixin buDirection($direction) {
+    display: flex;
+    font-weight: bolder;
+    text-decoration: underline;
+    justify-content: $direction;
+} // here constructors can also be used to input desired values.
+
+@mixin background($bgcolor) {
+    background-color: $bgcolor;
+
+    @if $bgcolor = "black" {
+        color: white;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 800px) {
+        @content; // @content is just a variable that will be defined when this @mixin is defined
+    }
+}
+
+.fontsize {
+    width: 50%;
+    margin: 0 auto;
+
+    &s {
+        // here the '&' refers to '.fontsize' which is the parent element being mentioned here. and after that, the 's' is just a concatted string added to the parent element string. But here, all the elements having class 'fontsizes' will follow the css mentioned bellow. TO MAKE THE CSS ONLY FOLLOW THE ELEMENTS EXISTING UNDER THE SPECIFIED PARENT ELEMENT, WE HAVE TO DO THIS -> #{&} <-. THEN THE CSS WOULD BE ONLY APPLICABLE TO ELEMENTS MENTIONED UNDER 'fontsize' '#{&}'
+        // transform: scale(1.5);
+        font-weight: bolder;
+    }
+
+    #{&}s {
+        font-family: $righteous;
+    }
+    #{&}s:hover {
+        color: white;
+    }
+
+    &2 {
+        font-size: font-size(detailcontent);
+        @include buDirection(flex-end);
+        @include background(black);
+        @include phone {
+            // color: rgb(0, 255, 255);
+            background-color: green;
+        }
+    }
+
+    &3 {
+        @include phone {
+            color: rgb(0, 255, 255);
+        }
+    }
+
+    &4 {
+        @extend .fontsize3;
+
+        // this would duplicate the properties of the selector that is extended here. to make any changes just specify it.
+
+        font-weight: bolder;
+
+        font-size: 100px - 60px; // here we can use calculations based values to specify the style of any element. 
+    }
+}

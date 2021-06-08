@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+
+            let randomVariable = 'THIS IS A STRING'
+
+
+            if (randomVariable == undefined) {
+                // console.log('THIS IS NOT A STRING')
+                // instead of the above we can  write
+                throw new Error('THIS IS NOT UNDEFINED') // this is generally used when there is contradiction to the required function
+                console.log(randomVariable)
+            }
+            else {
+                console.log('THIS IS UNDEFINED')
+            }
+
+            try {
+                thisisnotanyfunction() // This would give an error because there is not function 'thisisnotafunction()'. so it would execute the catch statement instead of try.
+            } catch (error) {
+                console.log('THE ERROR HAD OCCURED BUT IT HAS BEEN RESOLVED') // this would run incase try function does not work or give an error
+                console.log(error) // this would print the error as a whole string not as console.error
+                console.log('ERROR NAME/TYPE-> '+error.name) // this would output the type of the error which is stored in the name variable of the chrome module itself
+                console.log( 'ERROR MESSAGE-> ' + error.message) // this would output the whole error that has been occured
+            }
+
+
+
+            try {
+                console.log('this would run')
+            } catch(error) {
+                console.log('this would not run because the try function does not give any error')
+            }
+
+
+            try {
+                console.log('this would run first if there is no error')
+            } catch {
+                console.log('this would run first if there is an error')
+            } finally {
+                console.log('this would run second irrespective of the occurence of the error')
+                // the finally function works irrespective that there is an error or not. after either of them has run, this would run
+            }
+
+
+        </script>
+    </body>
+</html>

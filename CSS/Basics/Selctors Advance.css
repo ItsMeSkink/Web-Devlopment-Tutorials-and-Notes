@@ -1,0 +1,41 @@
+h1 {
+    background: aliceblue;
+    font-weight: bolder;
+    color: yellow;
+    text-align: center;
+}
+
+div p {
+    color: blue;
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+
+
+/* this refers to the path of the element which has to be customized. In this case the div refers to the all elements under "div" and "p" refers to the paragraphs under all divs' . */
+
+div li p {
+    background-color: violet;
+    font: 40px italic green;
+}
+
+
+/* this refers to the path of the paragraph text that is written under li which is written under div */
+
+div>p {
+    background-color: yellow;
+    font: 30px bold blue;
+}
+
+
+/* this selector property is used to target only the direct childs' of the parent not in heriarchy.  */
+
+div+p {
+    background-color: black;
+    font: 50px italic white;
+    color: white;
+}
+
+
+/* the element with synatx (after +) will be applied on the elements whose previous element was under the syntax (before the +). 
+In this case the any "p" after "div" would fall under this.   */

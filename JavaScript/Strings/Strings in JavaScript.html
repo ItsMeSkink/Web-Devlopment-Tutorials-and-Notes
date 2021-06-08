@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur voluptatum sunt. Obcaecati ad perferendis ex? Aut fugiat voluptates, voluptas consequatur incidunt laborum? Saepe delectus suscipit consequuntur optio, porro quo quisquam ipsum voluptatibus, fugiat veritatis, vel doloremque! Quibusdam illum nam omnis voluptates natus illo officiis repudiandae consequatur cupiditate, reprehenderit impedit repellat magni architecto laboriosam deleniti aut repellendus soluta, esse, assumenda maiores tempora alias. Qui natus nulla libero, inventore officiis et aliquam sit iusto autem aperiam quisquam praesentium, dignissimos sapiente nisi consequatur. Temporibus aperiam nobis placeat cum. Odit delectus ea in veniam eligendi, harum quis aspernatur, ipsam cupiditate perspiciatis facilis assumenda!</p>
+            <p id="content"></p>
+        </div>
+
+
+        <script>
+            var string = "This is a text";
+            console.log(string);
+            var name = 'Lakshya'
+            console.log(name)
+            // we can also use single quotes
+            var text = 'this is a long message..........................................'
+            console.log(text)
+
+            console.log(string + name + text);
+            // this will combine the texts and show it in one line without any spaces between them
+
+            var combinetext = `${name} wants to change the world for good and he has a ${text} for everyone`
+            // the ${__} will represent other inclusions of variables. This is use to change the text in the website itself and allow the text to automatically change in the browser.  
+            console.log(combinetext)
+
+            var len = name.length;
+            // the __.length is to figure out the number of letters in a word
+            console.log(`Number of characters in ${name} is ${len}`)
+
+            console.log("this is a message for the whole human race\n this belongs to every person on earth")
+            // the \n used in the above sentence is to bring the following text in the next line. This is an example of Escape Sequence Character. They are special characters to change the text. \n represents the next line as "enter". One more exmaple is \b that is called backspace
+
+            // there is one more way to type something in the HTML as a string that display on the webpage. 
+            document.getElementById('content').innerHTML = '<h2>This is a text that has been typed in JavaScript but displayed as HTML</h2>'
+        </script>
+
+    </body>
+</html>

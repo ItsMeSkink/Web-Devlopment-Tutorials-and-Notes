@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>This is Text Item-1</li>
+                <li>This is Text Item-2</li>
+                <li>This is Text Item-3</li>
+                <li>This is Text Item-4</li>
+                <li>This is Text Item-5</li>
+                <li>This is Text Item-6</li>
+                <li>This is Text Item-7</li>
+                <li>This is Text Item-8</li>
+                <li>This is Text Item-9</li>
+                <li>This is Text Item-10</li>
+            </ul>
+            <p id="item"></p>
+        </div>
+
+
+        <script>
+            var string1 = "THis is a string"
+            string1 = "This is an example of a string"
+            console.log(string1)
+            // "var" scope is always global. If  defined once, it can be defined again.
+            // the printing/operating values in the Java Script depends on the precedence of the defination of a particular variable. In this case first, the string1 is defined as "THis is a string." and then as "This is an example of a string.". If we print it in the console log on anywhere, the text that would be considered and displayed would be the latest one that is defined. In this case, it is "THis is an example of a string". IT ALL DEPENDS ON THE PRECEDENCE OF THE DEFINATION OF THE VARIABLES. 
+
+
+            let string2 = "This is a string example."
+            // "let" is another way of defining the variable. It is a block variable which is also called the block level scope. It means if it is defined once, it can't be defined again. If tried, error will pop up. "let" is a function. SCOPE IS THE EFFECT OF TEH DECLERATION/DEFINATION OF TEH VARIABLE ON OTHER or THE ACCESSIBILTY OF THE VARIABLES ON THE WHOLE CODE. 
+            // In this case, the effect of the variable will only be limited to its origin of defination only. Let's understand it properly. Even though "let" is a global variable, it will affect the whole code. if declared again-> error. But if it is declared in a curly brackets, no error will be displayed, because it doesn't coem under global effects of the decleration on the variable
+
+            // let string2 = "this is not a string example."
+            // it will display an error mentioning that the variable has already been declared. 
+
+            let string3 = "string3 example"
+
+
+            {
+                // any variable inside this would be only limited within this curly brackets only. Outside this it wouldn't be operational
+                // "let" declaration is better than usign var inside these curly brackets 
+                let string3 = "this is another example of string"
+                // this will not display an error because it is present inside the curly brackets. 
+                console.log(string3);
+                // this will display the decleration of the variable inside the curly brackets only. 
+            }
+
+            console.log(string3);
+            // this will display the decleration of the variable outside the curly brackets which is considered as global. 
+
+            const string4 = "this string is fixed and cannot be changed"
+            // this is an upper level global scope variable which also have affects inside the curly brackets
+            console.log(string4);
+
+            {
+                // string4 = "does this change?"
+                console.log(string4)
+            }
+
+            let age = 17;
+            if (age > 18) {
+                console.log("You can have a driving liscense.")
+            }
+            else if (age == 16) {
+                console.log("You can have a learner's permit and can only drive with an 18+ beside you.")
+            }
+
+            else if (age == 17) {
+                console.log("You can drive without any parent beside you. ")
+            }
+            // "==" is used as a comparator and "=" is used as an assignment which means that "=" will define the variable as what is written after that and if "==" is used then, it is being comapared that the one written after. "==" is used in the conditional scopes. ELSE IF can be only written before ELSE. 
+
+            else {
+                console.log("You cannot have a driving liscence.")
+            }
+            // this is just like english grammar. IF this than this, IF not that what ELSE?
+
+            // the conditionals are used to create form validations to check for the user whether the characters in the given text area is matching the conditions or not. 
+
+
+            const ckusers = 52;
+            switch (ckusers) {
+                case 10:
+                    console.log('number of users are 10')
+                    break;
+                case 20:
+                    console.log('number of users are 20')
+                    break;
+                case 30:
+                    console.log('number of users are 30')
+                    break;
+                case 40:
+                    console.log('number of users are 40')
+                    break;
+                case 50:
+                    console.log('number of users are 50')
+                    break;
+                case 60:
+                    console.log(`number of users are more that ${ckusers}`)
+                    break;
+
+                default:
+                    console.log(`the number of users are less that ${ckusers}`);
+                    break;
+                // if we do not put the break; tag after the condition, the console would display all the outcomes/results till the break; tag is included. It is like curly brackets between the
+                //  case __:___________________________________________________________________________ and       break;
+                // the default case is the outcome when none of the conditions match.
+                // it is not madatory to only use integers/numeric values. We can also use strings. 
+
+            }
+
+        </script>
+    </body>
+</html>

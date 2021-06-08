@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-columns:repeat(3, auto);
+    grid-template-rows: repeat(5, 150px);
+    grid-auto-rows: 200px;
+    grid-column-gap: 20px ;
+    grid-row-gap: 40px ;
+    /* the above two properties are to define custom grid gaps between the rows and the columns */
+
+}
+.text:first-child {
+
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    
+    /* This property is to combine elements in the grid.The starting and the ending is not based on the element but the gaps between it. It starts form the gap from the border of the whole webpage on the left to the right. 3 means the one before element 1, next to it and next to next. It means that you have to write one digit more that the 
+    desired elements you want to combine.  */
+    
+    /* grid-row-start: 1;
+    grid-row-end: 4; */
+
+    grid-column:1/ span 2;
+    grid-row: 4/ span 3;
+    /* this will combine the elements on the basis of the elemetns instead of gaps. it goes like this (out of divided parts/span ending magnitude) */
+
+}
+
+.text {
+    border: 2px solid red;
+    background-color: blue;
+    color: aliceblue;
+    font-weight:bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

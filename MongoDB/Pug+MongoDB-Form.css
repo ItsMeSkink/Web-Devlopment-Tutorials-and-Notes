@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+body {
+    background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-02/210211-mars-perseverance-rover-se-111p-951c48.jpg);
+}
+* {
+  font-family: 'Krona One', sans-serif;
+}
+#heading {
+    background-color: black;
+    color: white;
+    margin: -8px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 60px;
+    text-align: center;
+}
+
+span {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+span input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+    
+span label {
+    font-size: 30px;   
+    color: rgb(255, 251, 0); 
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+        justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 50px;
+    margin: 2px 200px;
+}
+
+form button {
+    border-radius: 50px;
+    background-color: lightgreen;
+    color: rgb(255, 0, 255);
+    margin-top: 20px;
+    width: 200px;
+    /* height: 40px; */
+    text-shadow: 2px 2px yellow;
+    font-size: 20px;
+    padding: 10px;
+}
+
+

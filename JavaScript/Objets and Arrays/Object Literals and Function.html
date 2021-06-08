@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            let newObject = {
+                name: ' Lakshya',
+                surname: 'Monga',
+                middlename: 'Pratap',
+                email: 'wickedskink@gmail.com',
+                phonenumber: '9810030316',
+                age: 15,
+                a_l: 'liability till now',
+                run: function () {
+                    console.log('The Account has been created successfully')
+                }
+            }
+
+            newObject.run // this will perform the 'run' function that is defined in the newObject object. 
+
+            new Date() // this will create an object 
+
+
+            function newAccount(name, middlename, surname, email, phonenumber, age, aspects) {
+                // this function would create an Object. the function would help us define the values that are listen in the (). we can define these values further in the code and perform anything with them .    
+                // this is called a CONSTRUCTOR
+
+                this.name = name
+                this.middlename = middlename
+                this.surname = surname
+                this.email = email
+                this.phonenumber = phonenumber
+                this.age = age
+                this.aspects = aspects
+
+                this.success = function () {
+                    console.log(` ${this.name}, your account is successfully made. Your credentials are: 
+                First Name : ${this.name}
+                Middle Name: ${this.middlename}
+                Last Name: ${this.surname}
+                Email : ${this.email}
+                Phone Number : ${this.phonenumber}
+                Age: ${this.age}
+                Aspects: ${this.aspects}
+                `)
+                }
+            }
+
+            let account1 = new newAccount('Lakshya', 'Pratap', 'Monga', 'wickedskink@gmail.com', '9810030316', '15', 'Science and Innovation')
+
+            console.log(account1) // this will print the whole account1 variable as an object
+            console.log(account1.name) // this will print only a specfic variable defination from the object
+            account1.success() // this would perform the function that is defined inside the newAccount function variable
+            
+
+        </script>
+    </body>
+</html>

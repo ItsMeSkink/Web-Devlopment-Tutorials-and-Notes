@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+
+        <script>
+
+            // Instead of using the OLD for loop, we can use the new for loops that would make the code more readable and would take less time to process
+
+            var randomArray = [
+                'Lakshya',
+                'Manan',
+                'Shourya',
+                'Tanmay',
+                'Aastha',
+            ]
+
+            for (i = 0; i < randomArray.length; i++) {
+                console.log(randomArray[i])
+                // this is the old way to use the for loop
+            }
+
+
+            var randomObject1 = {
+                name: 'Lakshya',
+                surname: 'Monga',
+                middlename: 'Pratap',
+                age: 15,
+                designation: 'CEO/Founder',
+                email: 'wickedskink@gmail.com'
+            }
+            console.log('___')
+            for (a = 0; a < Object.keys(randomObject1).length; a++) {
+                // the Object.keys(__) makes an Object behave like an array so that we can also measure using '.length', the number of variables inside an object whole.
+
+                console.log(randomObject1[Object.keys(randomObject1)[a]])
+                // object_name[Object.keys(object_name)[x]] 
+                // the object is again made an Array here using the Object.keys(). 
+                // the Object.keys(object_name) tells us the name of the variables in the object itslef and not its values. so in this case, it becomes, .name, .surname, .middlename, .age, .designation, .email
+                // we know that in the format of object_name.variable_name, we get the value of the particular variable.
+            }
+            console.log('__')
+
+            for (let key in randomObject1) {
+                // here the 'key' reads the name of the variable in form of string and outputs it in the {} to be processed and returned, 'in' refers to WHERE to read the variables
+                console.log(key + '->  ', randomObject1[key])
+                // here 'key' is a STRING of the name of variable like in JSON. to return that we have to use -> object_name('variable_name')
+                // to print that, we have to use this syntax-> randomObject1[key]
+            } //  this is a new way of iterating all the values of the object
+
+            let randomString = 'THIS IS AN EXAMPLE OF A STRING WRITTEN IN THE CONSOLE.LOG LETTER BY LETTER'
+
+            console.log('__')
+            for (let character in randomString) {
+                // this would treat the charcters in the string as an object contained combination of letters. the 'character' here is the index value of the characters
+                console.log(character + 'th character of the String is -> ' , randomString[character])
+                // THIS IS GENERALLY USED IN OBJECTS
+            }
+
+            console.log('__')
+
+            for(let arrayDefinations of randomArray){
+                //  this is another way of iterating the definations in the array themsleves instead of using the traditional for loop.
+                console.log(arrayDefinations)
+                // THIS IS GENERALLY USED IN ARRAYS
+            }
+
+            for (let eachCharacter of randomString) {
+                console.log(eachCharacter)
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

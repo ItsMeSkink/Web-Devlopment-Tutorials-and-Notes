@@ -1,0 +1,1 @@
+console.log ("this would be read by Static-Files.js file")

@@ -1,0 +1,38 @@
+#redText {
+    color: red;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.blueback {
+    background-color: blue;
+}
+
+#whiteText {
+    color: white;
+}
+
+#violettext {
+    color: violet;
+}
+
+
+/* the above four are used for Class and ID selectors. The selector with . in its starting is for CLASS and the # is for ID. */
+
+strong,
+#pinkback {
+    background-color: pink;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+
+/* the above syntax is used as grouped selctor to customize two different aspects (acordind to the designated selector) */
+
+#bgyellow {
+    background-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* To reduce the effort to write the full property names, we can just write shortforms. for example for border-color, we can write borcolor/bcolor(have to chose) or anything that first represent border and then color */

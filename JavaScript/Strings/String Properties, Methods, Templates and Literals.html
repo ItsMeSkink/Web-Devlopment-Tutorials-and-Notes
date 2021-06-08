@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            let firstname = "Lakshya "
+            let surname = "Monga "
+            let middlename = "Pratap "
+            // there is no default tab when we use the + to combine the strings. we have to put space manually in the strings
+
+            let fullname1 = firstname + middlename + surname
+            console.log(fullname1)
+
+            let html = " <h1> COLLAKNOW IS GOING TO CHANGE PEOPLE'S LIVES </h1>" + " <p> It would be mostly about spreading knowledge and creativity </p>"
+            // we have to combine strings to combine different tags in html in javascript. this is one way of combining strings in the variable defination itself
+
+            let htmlconcat = html.concat(' <h2> Social Media nowadays is becoming a problem and collaknow will do the inverse.', ' <h3> It would defy what our education system does </h3>')
+
+            console.log(html)
+            console.log(htmlconcat)
+            console.log(htmlconcat.length) //this specify how many letters are there in the whole string
+            console.log(htmlconcat.toLowerCase()) // this will convert the whole string into lower case
+            console.log(htmlconcat.toUpperCase()) // this will convert the whole string to the Upper case 
+            console.log(htmlconcat[122]) // this will display the nth number of character
+            console.log(htmlconcat.indexOf('education')) // this will display after how many characters this part of string exists. indexOf is for the first occurence closest to the start point
+            console.log(htmlconcat.lastIndexOf('>')) // this will yield the last character position from the starting point. The answer is 263. this means that there are 264 characters in the whole string
+            "REST OF THE FUNCTIONS ARE WRITTEN IN THE STRING FUNCITON DOCUMENT"
+
+
+        </script>
+
+
+    </body>
+</html>

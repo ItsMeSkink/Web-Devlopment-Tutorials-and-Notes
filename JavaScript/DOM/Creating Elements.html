@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <ul>
+            <li>This is Unordered List Item Number 1</li>
+            <li>This is Unordered List Item Number 2</li>
+            <li>This is Unordered List Item Number 3</li>
+            <li>This is Unordered List Item Number 4</li>
+            <li>This is Unordered List Item Number 5</li>
+        </ul>
+
+
+        <script>
+
+
+
+            let newElement = document.createElement('li')
+            let ul = document.querySelector('ul')
+
+            newElement.className = 'elementClass'
+            newElement.id = 'elementId'
+            newElement.setAttribute('name', 'elementName')
+            newElement.innerText = 'This is Unordered List Item Number 6 written in JavaScript'
+            // innerText would only just add Text without any specfic   properties like BOLD, ITALICS, STRIKETHROUGH, UNDERLINED etc. 
+            // innerHTML will add proper HTML which means that we can write the HTML code inside the '' and display according to us. 
+            ul.appendChild(newElement)
+            console.log(ul)
+            console.log(newElement)
+
+
+            let newElement_2 = document.createElement('li')
+            newElement_2.className = 'elementID2'
+            newElement_2.id = 'elementClass2'
+            newElement_2.innerHTML = '<h1> THIS IS AN UNORDERED LIST ITEM 6'
+
+            // newElement.replaceWith(newElement_2) // this will replace the element by another element in the parenthesis
+            
+            
+
+            newElement_2.remove() // this will remove the element completely
+
+            let attributeget = newElement.getAttribute('name') // this will return the defination of attribute in the HTML tag
+            console.log(attributeget)
+
+            let attributehas = newElement.hasAttribute('name') // this will return whether the element has this attribute or not
+            console.log(attributehas)
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+            This is example of a text under the class container
+        </div>
+        <div id="MathObjects"></div>
+
+        <script>
+            let m = Math;
+
+            console.log(m)
+            // this will display all the Math Objects.
+
+
+            document.getElementById('MathObjects').innerHTML = `The Value of E in the Math Objects is ${m.E} <br> The Value of LN2 in the Math Objects is ${m.LN2}`
+
+            console.log(`The value of E is ${m.E}`)
+            console.log(`The value of PI is ${m.PI}`)
+            console.log(`The value of LN2 is ${m.LN2}`)
+            console.log(`The value of LN10 is ${m.LN10}`)
+            console.log(`The value of LOG2E is ${m.LOG2E}`)
+            console.log(`The value of LOG10E is ${m.LOG10E}`)
+// this will help to print the individual Math Object Values
+
+
+    // E: 2.718281828459045
+    // LN2: 0.6931471805599453
+    // LN10: 2.302585092994046
+    // LOG2E: 1.4426950408889634
+    // LOG10E: 0.4342944819032518
+    // PI: 3.141592653589793
+    // SQRT1_2: 0.7071067811865476
+    // SQRT2: 1.4142135623730951
+
+    // this is the values of Math common number that are used to make algorithms
+
+
+            let a = 19.0780904729285289;
+            let b = 42;
+
+            console.log (a,b)
+            // this will display the actual designated values of the variables
+            console.log (m.round(a),m.round(b))
+            // this will display the rounded values of the variables. To do that, we have to use the function -> Math.round. In this case the m variable has already been given the value of Math Object
+            console.log (m.pow(2,b))
+            // the power function is used to calculate the power of the number. The format goes like this -> Math.pow(base, exponent)
+
+            console.log (m.sqrt(64))
+            // this will calculate the Square Root of the number in the brackets
+
+            console.log (m.ceil (5.6))
+            // this will round up the value to the next integer
+
+            console.log (m.floor (5.6))
+            // this will round down to the previous integer
+
+            console.log (m.abs (3.8))
+            console.log (m.abs (-3.8))
+            // the abs function is to always output the value in positive which is  | |  in written maths
+
+            console.log (Math.sin(Math.PI/2))
+            console.log (Math.cos(Math.PI/2))
+            console.log (Math.tan(Math.PI/2))
+            // these are the trignometric functions which is used to calculate the values. The numbers inside the brackets is in Radian not degrees
+
+
+            console.log (m.min(9, 1 , 4, 6, 7, 2, 5, 9))
+            // this will extract the minimum value among all the numbers in the bracket. In this case it is 1
+
+            console.log (m.max (9, 1, 4, 6, 7, 2, 5, 9))
+            // this will extract the maximum value among all the numbers in the bracket. In this case, it is 9
+
+            console.log (m.random())
+            // this will give any random number between 0 and 1 as an output
+            let d = 1
+            let e = 12
+
+
+            let c = d + (e-d)*m.random()
+            console.log (m.abs(c))
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

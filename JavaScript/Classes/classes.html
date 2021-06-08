@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+            // class is same as function but with additional features such as "extend", "super", "static", "constructor"            
+            class User {
+                constructor(name) {
+                    this.name = name
+                    // to enable the function method (i.e. id() in this case), we have to first use "this" keyword
+
+                    // here the this refers to "User" method. consider this = User . When we write User.name , we would get the variable 'name' defination. 
+                    // name
+
+                    // here the constructor is same as function(variable) {method}
+                }
+                id() {
+                    return 'my name is ' + this.name
+                    // we always have to use "this" keyword (defined in the constructor) to use it in this function method
+                }
+                // here we can also add our own function method which could actually use the variables inside the constructor to perform a new function.
+            }
+
+            let lakshya = new User('lakshya')
+            console.log(lakshya.id())
+
+            class Friends extends User {
+                constructor(name, friends) {
+                    super(name)
+                    // here the "super" would call the whole constructor method under User (due to extends). this would enable us to use this.id() in further function
+                    this.friends = friends
+                }
+                friends1() {
+                    return this.id() + ' ' + 'and his friends are ' + this.friends
+                    // here "this.id" is recieved from User (due to extends) 
+                }
+            }
+
+            let lakshya1 = new Friends('lakshya', [
+                'tanmay',
+                'aastha',
+                'shoruya',
+                'manan'
+            ])
+            console.log(lakshya1.friends1())
+
+
+            class Greetings extends Friends {
+                constructor(name, friends) {
+                    super(name)
+                    super(friends)
+                }
+                static hello() {
+                    return this.id() + this.friends()
+                }
+            }
+        </script>
+    </body>
+</html>

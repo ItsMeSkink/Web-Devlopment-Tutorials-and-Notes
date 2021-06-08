@@ -1,0 +1,142 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wholebody {
+    display: flex;
+}
+
+#heading {
+    background-color: black;
+    margin: -8px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#inputbody {
+    margin-left: 20px;
+    margin-right: 300px;
+    margin-top: 20px;
+    width: 615px;
+   
+}
+
+#url label {
+    font-size: 30px;
+}
+#url input {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#contenttype label:first-child {
+    font-size: 30px;
+}
+
+#ContentTypeRadio {
+    margin-left: 20px;
+}
+#ContentTypeRadio label {
+    font-size: 25px !important;
+}
+
+#method label:first-child{
+    font-size: 30px;
+}
+#MethodRadio {
+    margin-left: 20px;
+}
+
+#MethodRadio label{
+    font-size: 25px !important;
+}
+
+#jsoninput {
+    display: none;
+    width: 300px;
+}
+
+
+
+#jsoninput label{
+    font-size: 30px;
+}
+
+#jsoninput textarea {
+    border-radius: 10px;
+    background-color: yellow;
+    border: 2px solid black;
+    padding: 10px;
+    border-top: 13px solid lightgreen;
+}
+
+#custominput label {
+    font-size: 30px;
+}
+#custominput {
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#custominputtypespace {
+    display: flex;
+    margin-top: 20px;
+}
+
+#CustomInput {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#CustomInput input {
+    height: 30px;
+    width: 200px;
+    border-radius: 7px;
+    border: 1px solid lightgreen;
+    padding: 5px;
+}
+
+#custominput button {
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+#outputbody {
+    margin-top: 50px;
+}
+
+#outputbody textarea {
+    background-color: rgb(46, 46, 46);
+    border-radius: 10px;
+    color: white;
+}
+
+#heading header {
+    color: whitesmoke;
+    padding: 10px;
+}
+
+#outputbody {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputbody form #submitbutton button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#inputbody button:hover {
+    background-color: green;
+}
+
+

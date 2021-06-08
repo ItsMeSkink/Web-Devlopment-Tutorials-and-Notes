@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul id="main">
+            <li id="li1">This is example of a Text1</li>
+            <li id="li2">This is example of a Text2</li>
+            <li>This is example of a Text3</li>
+            <li>This is example of a Text4</li>
+            <li>This is example of a Text5</li>
+        </ul>
+
+        <div class="continer">
+            What
+        </div>
+        <div class="continer">
+            is
+        </div>
+        <div class="continer">
+            that?
+        </div>
+
+        <script>
+            let main = document.getElementById("main")
+            console.log(main)
+
+            let li1 = document.getElementById("li1")
+            console.log(li1)
+
+            let container = document.getElementsByClassName("continer");
+            console.log(container);
+            console.log(container[0]) // }
+            console.log(container[1]) // } } syntax to show different childs under a parent
+            console.log(container[2]) // }
+
+            let selectorexample = document.querySelector("#li2");
+            // this is similar to CSS selector as here the Id and Class is chosen by . and # 
+            console.log(selectorexample)
+
+            let se2 = document.querySelector("ul>li")
+            console.log(se2)
+
+            console.log("________________")
+            // MORE FUNCTIONS AND METHODS
+
+
+            console.log(document) // this will give the HTML code of the document on the console just like the one on the ELEMENTS section
+            console.log(document.all) // this will give all the tags that are in the code along with IDS and Classes
+            console.log(document.body)
+            console.log(document.getElementsByTagName('div')[1])
+            console.log("____")
+            // Array.from(document.getElementsByTagName('li')).forEach(function (element) {
+            //     console.log(element)
+            // })
+
+
+
+
+
+        </script>
+    </body>
+</html>

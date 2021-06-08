@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+            // we can say that a map is a collection of elements where each object is stored in a key
+            const newMap = new Map() // here 'Map()' is a constructor where values are to be stored
+            console.log(newMap)
+
+
+            const key1 = 'this is a random string', key2 = {}, key3 = function () {}
+            // this would not give an error but it is a combination of many constants stored together
+
+            newMap.set(key1, 'this is a string') // this is how we put keys an Map
+            newMap.set(key2, 'this is a blank object')
+            newMap.set(key3, 'this is blank function')
+            //  the first argument is the key and the second argument is the value
+            console.log(newMap)
+
+            console.log(newMap.get(key1)) // this will yield the value (the second argument in the key)
+            console.log(newMap.get(key2)) // this will 'get' the value from the Map itself
+            console.log(newMap.get(key3))
+
+            console.log(newMap.size) // this would give how many keys are stored in the whole Map.
+
+            console.log('__')
+
+            for (let [key, value] of newMap) {
+                //  this would read the 'key' and the 'value' of all the keys and values stored in the Map
+                console.log(key, '->', value)
+                // this will iterate the whole Map
+                console.log(key + ' is the key')
+                console.log(value + ' is the value')
+                console.log('')
+            }
+
+            console.log('__')
+            for (let keys of newMap.keys()) {
+                // this will read all the 'keys' of the 'newMap' Map where all keys and values are stored
+                console.log('This is the key of the Map -> ' + keys) // this would print the keys
+            }
+            console.log('__')
+            for (let values of newMap.values()) {
+                // this is similar to the above case in which we use Map_Name.keys() to get keys. in this we use Map_Name.values() to get the values
+                console.log('This is the values of the Map -> ' + values)
+            }
+            console.log('__')
+            newMap.forEach((key, value) => {
+                // this is how we can iterate the whole Map using .forEach() function
+                console.log(key, value)
+            })
+            console.log('__')
+
+            let newArray = Array.from(newMap) // this is how we convert Map to ARRAY
+            console.log(newArray) // this array would again contain 2 arguments respective to the structure of the Map. or we can say that there are 2 arrays which contain the first defination as the 'key' and the second defination as 'value'
+
+            console.log('__')
+
+            let newKeyArray = Array.from(newMap.keys()) // this would read the keys from the map objects and convert all of them into array
+            console.log('THESE ARE THE KEYS FROM THE MAP')
+            console.log(newKeyArray)
+
+            console.log('__')
+
+            let newValueArray = Array.from(newMap.values()) // this would read the values from the map objects and convert all of them into array. 
+            console.log('THE BELOW ARE THE VALUES FROM THE MAP')
+            console.log(newValueArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

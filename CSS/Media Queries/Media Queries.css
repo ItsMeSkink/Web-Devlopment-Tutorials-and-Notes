@@ -1,0 +1,41 @@
+.box {
+    background: red;
+    color: black;
+    font-size: 84px;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width:300px) {
+    #box-2 {
+        display: block;
+    }
+}
+
+
+/* this is a media query which responds to the conditions that are assigned by the programmer. We put the condition in the brackets followed and then the properties that will be followed when that condition would be met. In this case, that would be - When the display-width would be less than 500px, the element with display box-2 would be displayed as a block element. IF THE CONDITION IS NOT MET, THE PROPERTIES UNDER IT WOULD BOT BE FOLLOWED     */
+
+@media (max-width:500px) and (min-width:300px) {
+    #box-1 {
+        display: block;
+        background-color: aliceblue
+    }
+}
+
+@media (max-width:800px) and (min-width:500px) {
+    #box-3 {
+        display: block;
+        background-color: rgba(11, 165, 139, 0.555)
+    }
+}
+
+@media only screen and (min-width:800px) {
+    #box-4 {
+        display: block;
+        background-color: rgba(251, 255, 0, 0.555)
+    }
+    #box-3 {
+        display: block;
+        background-color: rgba(11, 165, 139, 0.555)
+    }
+}

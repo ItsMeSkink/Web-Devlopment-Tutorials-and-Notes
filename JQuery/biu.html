@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="Bold">Bold</button>
+        <button id="Italics">Italics</button>
+        <button id="Underline">Underline</button>
+
+        <div id="Content" contenteditable="true" style="border: 5px solid red; height: 400px;"></div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+
+            $('#Bold').click(() => {
+                document.execCommand('bold', false, null)
+            })
+            $('#Italics').click(() => {
+                document.execCommand('italic', false, null)
+            })
+            $('#Underline').click(()=> {
+            document.execCommand('underline', false, null)
+            })
+        </script>
+    </body>
+</html>

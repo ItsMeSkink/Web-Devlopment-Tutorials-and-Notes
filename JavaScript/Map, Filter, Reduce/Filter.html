@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+            const ages = [14, 15, 42, 46, 80]
+
+            function eligibility(age) {
+                return age <= 18;
+            }
+
+            console.log(ages.filter(eligibility)); // this would filter according to the filters that are specified in the function "eligibility" and print it. 
+
+            //___________________________________________________________________________________________
+
+            const name = [
+                { FirstName: 'Lakshya', MiddleName: 'Pratap', LastName: 'Monga' },
+                { FirstName: 'Tanmay', MiddleName: null, LastName: 'Garg' },
+                { FirstName: 'Shourya', MiddleName: null, LastName: 'Sethi' },
+                { FirstName: 'Manan', MiddleName: null, LastName: 'Sethi' },
+            ]
+
+            function sethi(lastname) {
+                return lastname.LastName == "Sethi"
+                // this will return the people who have surname 'Sethi'
+            }
+
+            console.log(name.filter(sethi));
+
+
+        </script>
+    </body>
+</html>

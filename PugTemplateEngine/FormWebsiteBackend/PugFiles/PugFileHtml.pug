@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> #{title} </title>
+        style
+              include ../CssFiles/PugFileHtml.css
+    </head>
+    <body>
+        <h1 id="title">Sign In</h1>
+
+        <form action="/" id="signinform" method="post">
+            //- in get request the definations of the variables are displayed in the url bar of chrome, that's why we use the POST request.
+            <h3>First Name </h3>
+            <input type="text" name="FirstName" id="FirstName">
+            <br>
+            <h3>Last Name </h3>
+            <input type="text" name="LastName" id="LastName">
+            <br>
+            <h3>Username </h3>
+            <input type="text" name="UserName" id="UserName">
+            <br>
+            <h3>Email </h3>
+            <input type="text" name="Email" id="Email">
+            <br>
+            <h3>Age</h3>
+            <input type="number" name="Age" id="Age">
+            <br><br>
+            <button id="button">Sign In</button>
+        </form>
+        <h1 id="message"> #{message} </h1>
+
+        <!-- NAME HAS TO BE MENTIONED IN ORDER TO GET AN OUTPUT FOR THE INPUT FORM  . This is one of the important factors that we need to take care of while coding.  -->
+
+        <form action="/reset" method="get">
+            <button>go back</button>
+        </form>
+
+
+
+    </body>
+</html>

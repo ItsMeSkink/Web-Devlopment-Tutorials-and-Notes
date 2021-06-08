@@ -1,0 +1,70 @@
+.container1 {
+    background-color: burlywood;
+    border: 4px solid rgb(41, 185, 73);
+    padding: 20px;
+    margin: 15px;
+}
+
+
+/* padding helps to organize the text properly within the background. It create space between the borders and the text. The text shifts to a little far away from the borders according to the value designated. The background and border also increases accordingly 
+    */
+
+.container2 {
+    background-color: lawngreen;
+    border: 3px groove red;
+    padding-top: 3px;
+    padding-right: 4px;
+    padding-left: 6px;
+    padding-bottom: 7px;
+    margin: 10px;
+}
+
+.container3 {
+    background-color: rgb(0, 223, 252);
+    border: 3px groove rgb(204, 0, 255);
+    padding-top: 3px;
+    padding-right: 4px;
+    padding-left: 6px;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    margin-left: 11px;
+    margin-right: 7px;
+}
+
+
+/* margin helps to create space among the overall elements (which include the text, padding and the border). It creates space between two backgrounds.
+    
+ we can also create paddings and margins for sides also (which are top, right,bottom and left). This will only create space according to that */
+
+.container4 {
+    background-color: rgb(37, 190, 45);
+    border: 3px groove rgb(151, 72, 109);
+    padding: 2px 5px 6px 11px;
+    margin: 20px 15px 12px 20px;
+}
+
+
+/* to shorten the irregular padding/margin customization per side, we can just write padding/margin: top, right, bottom, left ; format. In this the sides represent the custom values which we assign.
+
+To give the top and bottom, same values and left and right, same values, we have to write like this padding/margin: value13 value 34  ;
+*/
+
+.container1,
+.container2,
+.container3,
+.container4 {
+    border-radius: 14px;
+    width: 1000x;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* (*) is an universal selector which applies to all elements in the file  */
+
+
+/* if the width is lower than the padding, the text will go according to the width and the background will go according to the padding.
+To overcome this, we can use box-sizing: border-box ; */

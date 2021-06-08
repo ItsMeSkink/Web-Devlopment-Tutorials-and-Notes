@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Selectors.css">
+</head>
+
+<body>
+    <h1>Selectors in CSS</h1>
+    <p>
+        This is an example to demonstrate Selectors
+    </p>
+    <!-- this will follow the style customization given to it according to the tag udner which the text is written. Other texts in the code under the same selector tag will also follow that.  -->
+    <div>
+        <p>This is an example of pargraph under div tag</p>
+    </div>
+    <!-- the style customization for p tag will also follow here. div tag does not make it an exception. -->
+
+    <p id="redText">
+        This is an example of ID Selector under the p tag. The style customization given to this particular ID would be applied on this irrespective or its Tag i.e. p in this case. If there is already any style customization given to the p tag, it will follow
+        that untill it is over-ridden by a style customization given under its ID selector.
+    </p>
+
+
+    <span class="blueback" id="whiteText">
+    This is para 1 from the example of the class of text having BLUE BACKGROUND and having WHITE TEXT
+</span>
+
+    <br>
+
+    <span class="blueback" id="violettext">
+    This is para 2 from the example of the class of text having BLUE BACKGROUND and having VIOLET TEXT
+</span>
+
+    <!-- class can cover multiple elements/tags, but ID has to be designated unique (if given) to each tag -->
+    <br>
+    <br>
+    <strong>
+    This is BOLD text with grouped selector
+</strong>
+    <br>
+    <span id="pinkback">
+    This is pink background span tag text with grouped Selector
+</span>
+
+    <!-- these two above can be grouped in CSS after their designated selectors are written as per the syntax seperated by a comma -->
+    <br>
+    <br>
+    <strike id="bgyellow">
+    This is an example of StrikThrough text having yellow background colour
+</strike>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+This is sample of text that is being received by the introduction.html file in the script tag

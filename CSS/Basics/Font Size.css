@@ -1,0 +1,40 @@
+            html {
+                font-size: 25px;
+            }
+            
+            .container {
+                font-size: 20px;
+                border: 4px solid red;
+                width: 500px;
+                /* height: 250px; */
+                height: auto;
+                /* "vh" stands for Viewport Height. 100 vh means that the element will cover the whole viewport height. vh = (magnitude of vh) x (registerd height of the particular web browser). Consider it to be the percentage. */
+                width: 100vw;
+                /* "vw" refers to the viewpoft width. 100 vw means that the element twill cover the whole viewport width. vw = (magnitude of vw) x (registerd width of the particular web browser).  Consider it to be the percentage.   */
+            }
+            
+            h1 {
+                text-align: center;
+            }
+            
+            #first {
+                font-size: 4em;
+                padding: 2em;
+                /*  */
+                /*  */
+                /* the "em" unit is for the multiple of the "px" mentioned in the parent box. em = (magnitude of em) x (px) */
+                /* the "em" unit in a second property always take its parent as the previous property in the same selctor. Like in this case the padding would be (2x4x20) px. 2 in padding, 4 in font-size and 20px for the font-size in the parent box.  */
+            }
+            
+            #second {
+                font-size: 10rem;
+                padding: 2rem;
+                /*  */
+                /*  */
+                /* this is the case for the whole HTML document. The "rem" denotes the multiple of px under the whole HTML lang tag. For example in this case for font-size, it is (25x10)px and for the padding, it is (25x10x2)px. */
+            }
+            
+            #third {
+                font-size: 2rem;
+                padding: 3rem;
+            }

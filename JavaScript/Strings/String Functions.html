@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>This is a heading for JS String Function Tutorial</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae necessitatibus adipisci, porro excepturi ipsa molestiae. Illum quibusdam fugiat veritatis quam distinctio architecto quae eius voluptatum ex eaque magni et, id totam incidunt quaerat. Inventore, minima amet eos at incidunt pariatur, cupiditate unde alias quia consectetur sint a odit totam tenetur. Neque necessitatibus incidunt numquam architecto perspiciatis veritatis beatae assumenda ducimus. Commodi ex dolorem, velit at eligendi expedita temporibus animi consectetur delectus illum voluptatem aliquid ducimus nisi est minima assumenda sapiente maxime vel fugiat rem! Vero odio, tempore saepe consequuntur, dolorem adipisci reprehenderit quo autem necessitatibus quas nesciunt, sit suscipit earum.</p>
+            <p id="content"></p>
+        </div>
+
+
+
+
+
+
+
+        <script>
+
+            console.log('Hello World')
+
+            
+
+            var str = "Thanananaananis is an an an an an an an exmaple of a String"
+            console.log(str);
+
+            var position = str.indexOf('exmaple');
+            console.log(position)
+            // the above var ____ = ___.indexOf('___') calculates the difference of characters that the text inside the indexOf('__'). Or it calculates the first occurence of the word/character.
+
+            var posofis = str.lastIndexOf('an');
+            console.log(posofis)
+            // the above calcualtes the last occurence of the word/character
+
+            var slice = str.slice(0, 14);
+            // this will only take the characters that come between the 0th and 14th posititon. The rest of the text will not be printed. ___.slice is used for that. And the paranthesis after that defines the positions in between we want the string to be printed.     
+            console.log(slice)
+
+            var substring = str.substring(15, 30);
+            // this will do the same thing as the slice property that was used previously.
+            console.log(substring)
+
+            var substr = str.substr(1, 10)
+            // this will extract the characters from the total text present. The digit before the comma tells where to start and the digit(s) after that would tell how many characters to extract. 
+            console.log(substr);
+
+            var replaced = str.replace('exmaple', 'e.g.')
+            // this will replace a particular string with another text(s). The text before the comma is the one that has to be replaced with the one that is after the comma
+            console.log(str)
+            console.log(replaced)
+            console.log("you can see the difference")
+
+            console.log(str.toUpperCase());
+            // the "toUpperCase" function will put the whole text in the UPPERCASE characters. As it is a function, it has to followed by a (), open-close paranthesis.
+
+            console.log(str.toLowerCase());
+            // the "toLowerCase" function will put the whole text in the lowercase characters.
+
+            var concat = str.concat('This is an example of a Concatted text');
+            // concat is joining of 2 or more texts without spaces. 
+            console.log(concat)
+
+            var str1 = "      this is an      example of     too much spaces among the      text     "
+            console.log(str1.trim());
+            // the "trim" function will remove the first and the last extra spaces. This is called the WhiteSpaces. This will not remove the extra spaces between the words
+
+            var charAt = str.charAt(4);
+            console.log(charAt)
+            // this will display the 4th character that is existing the whole text which in this case would be "a" starting from 0 before the first letter. 
+
+            var charCodeAt = str.charCodeAt(5);
+            console.log(charCodeAt)
+            // this will tell you the character code of the particular character that is defined in the paranthesis. in this case the 5th character would be "n" and its character code would be 110. It is not very important. 
+
+            console.log(str[4]);
+// this will display the 4th character. This is a shortcut for charAt
+
+        </script>
+    </body>
+</html>

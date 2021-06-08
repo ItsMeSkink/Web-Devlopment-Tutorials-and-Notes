@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            let a, b
+            [a, b] = [13, 12] // we can also define mutiple variables like this
+            console.log(a, b) // this would print the defined variables
+
+            // ________________________________________________________________________________________
+
+            let c, d
+            [a, b, c, ...d] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] // here a,b,c will take the first 3 values from the defination array (1,2,3) and the rest subsequent values would be taken up by (d). the variable with ...(x) would can take up multiple values w.r.t. other defination of variables.
+
+            console.log(a)
+            console.log(b)
+            console.log(c)
+            console.log(d) // this would print the rest of the numbers that are taken up by the variable
+
+            console.log('__')
+
+            //________________________________________________________________________________________
+
+            let e, f, g, h
+            ({ a, b, c, ...d } = { a: 14, b: 15, c: 16, d: 17, e: 18, f: 19, g: 20 })
+            // a,b,c would take up the respective defined values w.r.t. the object
+            // here (d) would itself become an object which would contain the subsequent variables and definations  
+
+            console.log(a, b, c, d)
+
+
+            //___________________________________________________________________________________________
+
+            const names = ['Elon', 'Steve', 'Bill', 'Jeff', 'Mark', 'Jack', 'Shaq', 'Warren']
+
+            // [a, b, c, d, e, f, g, h] = names; // NOT WORKING
+            // console.log(names)
+            // console.log(a, b, c, d, e, f, g, h)
+
+
+            // ******THIS WAS ALL ARRAY DESTRUCTURING
+
+            let user = {
+                name: 'Lakshya',
+                surname: 'Monga',
+                middlename: 'Pratap',
+                print: function () {
+                    console.log('profile has been printed')
+                }
+            }
+
+            const {name, surname, middlename, print} = user // this would destruct the whole object and the definations of the variables in the object would be also stored in the new object. the function would also be stored and destructured
+
+            console.log(name, middlename, surname, print) // here print function would be printed rather than being carried out
+            print() // this would carry out the print function defined in the object itself rather that putting a 'user.' as a prefix
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

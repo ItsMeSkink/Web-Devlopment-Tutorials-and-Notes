@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <button id="start" onclick="audio.play()">TEST START</button>
+        <button id="stop" onclick="audio.pause()">TEST STOP</button>
+
+        <div id="datedisplay"></div>
+
+        <br><br>
+
+        <form>
+            <input type="number" name="Hour" id="Hour" placeholder="Hours">
+            <input type="number" name="Minute" id="Minute" placeholder="Minutes">
+            <input type="number" name="Second" id="Second" placeholder="Seconds">
+            <br>
+            <button type="submit" id="Submit">Set Alarm</button>
+
+        </form>
+
+
+
+
+
+        <script>
+
+            setInterval(() => {
+                const date = new Date()
+
+                var datedisplay = document.getElementById('datedisplay')
+
+                datedisplay.innerHTML = `
+            HOUR: ${date.getHours()} <br>
+            MINUTE: ${date.getMinutes()} <br>
+            SECONDS: ${date.getSeconds()} <br>
+            `
+
+            }, 1);
+
+            var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3')
+
+            let Submit = document.getElementById('Submit')
+            Submit.addEventListener('click', setAlarm)
+
+            function setAlarm(preventReload) {
+                preventReload.preventDefault() // the page reloads when we click the button as per the form tag. to prevent that we user preventDefault() function
+                console.log('the alarm is being setted.....')
+
+                var hours = document.getElementById('Hour').value
+                var minutes = document.getElementById('Minute').value
+                var seconds = document.getElementById('Second').value
+
+                let hour = Number(hours)
+                let minute = Number(minutes)
+                let second = Number(seconds)
+
+                const date = new Date()
+                console.log(hour, date.getHours())
+                console.log(minute, date.getMinutes())
+                console.log(second, date.getSeconds())
+
+         
+
+                let setTime = (hour*3600) + (minutes*60) + (second)
+                let presentTime = date.getHours()*3600 + date.getMinutes()*60 + date.getSeconds()
+
+                let timeLeft = setTime - presentTime
+
+                console.log('Present Time' ,presentTime)
+                console.log('Alarm Time',setTime)
+
+                console.log(Number(timeLeft))
+
+                setTimeout(() => {
+                    console.log('ok') 
+                    audio.play()
+                }, (timeLeft*1000));
+         
+
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

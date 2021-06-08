@@ -1,0 +1,47 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+
+#box1 {
+    transition-property: background-color;
+    /* this property defines the property that has tot be customized to transiton. There are various aspects for transitions like duration, behaviour etc. */
+    transition-duration: 2s;
+    /* the duration which takes to complete the transition */
+    transition-timing-function: ease-in;
+    /* specifies the animation_behaviour for speeds */
+    transition-delay: 1s;
+    /* delay after which, the transition will begin */
+}
+
+#box1:hover {
+    background-color: yellow;
+}
+
+#box2 {
+    transition: background-color 2s ease-out 1s;
+    /* property duration animation_speed_behaviour delay */
+}
+
+#box2:hover {
+    background-color: blue;
+    padding: 50px;
+}
+
+#box3 {
+    transition: all 0.5s ease-in-out 0.2s;
+    /* "all" is to select all the existing proeprties to transition */
+}
+
+#box3:hover {
+    padding: 10px 100px;
+    background-color: orange;
+    font-size: 72px;
+    border-radius: 10px;
+    margin: 30px;
+    border: 5px solid green;
+}

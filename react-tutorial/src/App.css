@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+body {
+  background-image: url("https://www.innovationnewsnetwork.com/wp-content/uploads/2020/03/Innovating-satellite-communication-with-quantum-entangled-photons.jpg");
+}
+
+* {
+  outline: none;
+  font-family: "Righteous";
+  color: black;
+}
+
+header {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+  background-image: linear-gradient(-45deg, red, magenta);
+  color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 1150px;
+  border-top-right-radius: 50px;
+  height: 7.5vh;
+}
+
+header #navigation a {
+  margin: 2px 13px;
+  font-weight: bolder;
+  font-size: 32px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+
+header #navigation a:hover {
+  font-size: 40px;
+  margin-top: 2px 17px;
+}
+
+header #search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #search input {
+  margin-right: 20px;
+  width: 400px;
+  border-radius: 100px;
+  border: none;
+  font-size: 25px;
+  padding: 5px 15px;
+}
+
+header #search button {
+  background-color: transparent;
+  font-size: 50px;
+  font-weight: bolder;
+  border: none;
+  color: black;
+}
+
+header #search button:hover {
+  color: yellow;
+  background-color: red;
+}
+
+#body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (405px)[2];
+      grid-template-rows: repeat(2, 405px);
+  -ms-grid-columns: (305px)[100];
+      grid-template-columns: repeat(100, 305px);
+  grid-gap: 20px;
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  z-index: 50;
+}
+
+#body .major {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  position: relative;
+  padding: 15px;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.616);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.616);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+#body .major #title-content_spotify {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 600px;
+}
+
+#body .major #title-content_spotify h4 {
+  width: 40%;
+  font-size: 40px;
+}
+
+#body .major #title-content_spotify #content-spotify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 13px;
+  width: 38%;
+  margin-top: 5px;
+}
+
+#body .major #title-content_spotify #content-spotify p {
+  height: 305px;
+  overflow: hidden;
+}
+
+#body .major #title-content_spotify #content-spotify img {
+  width: 200px;
+}
+
+#body .major #thumbnail {
+  margin-top: 30px;
+  height: 350px;
+  width: 600px;
+  border-radius: 20px;
+}
+
+#body .major .quarter {
+  width: 200px;
+  height: 200px;
+  border-radius: 400px 20px 20px 20px;
+  -moz-border-radius: 0 0 100px 0;
+  -webkit-border-radius: 400px 20px 20px 20px;
+  width: 45%;
+  height: 35%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#body .major *:not(.quarter) {
+  z-index: 2;
+}
+
+#body .minor {
+  position: relative;
+  padding: 7.125px;
+  -webkit-box-shadow: 9.5px 9.5px 9.5px rgba(0, 0, 0, 0.616);
+          box-shadow: 9.5px 9.5px 9.5px rgba(0, 0, 0, 0.616);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  border-radius: 9.5px;
+}
+
+#body .minor #title-content_spotify {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 285px;
+}
+
+#body .minor #title-content_spotify h4 {
+  width: 40%;
+  font-size: 19px;
+}
+
+#body .minor #title-content_spotify #content-spotify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 6.175px;
+  width: 38%;
+  margin-top: 2.375px;
+}
+
+#body .minor #title-content_spotify #content-spotify p {
+  height: 144.875px;
+  overflow: hidden;
+}
+
+#body .minor #title-content_spotify #content-spotify img {
+  width: 95px;
+}
+
+#body .minor #thumbnail {
+  margin-top: 14.25px;
+  height: 166.25px;
+  width: 285px;
+  border-radius: 9.5px;
+}
+
+#body .minor .quarter {
+  width: 95px;
+  height: 95px;
+  border-radius: 190px 9.5px 9.5px 9.5px;
+  -moz-border-radius: 0 0 100px 0;
+  -webkit-border-radius: 190px 9.5px 9.5px 9.5px;
+  width: 45%;
+  height: 35%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#body .minor *:not(.quarter) {
+  z-index: 2;
+}
+
+#body .scrolled {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+#commentsection {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  padding: 10px;
+  background-color: #00ffd5;
+  width: 500px;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+#commentsection ol {
+  overflow: auto;
+  width: 90%;
+}
+
+#commentsection ol li {
+  word-wrap: break-word;
+  font-size: 20px;
+  padding: 2px;
+}
+
+#commentsection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#commentsection input {
+  border-radius: 13px;
+  font-size: 25px;
+  padding: 3px 10px;
+  width: 400px;
+  border: none;
+}
+
+#commentsection button {
+  font-size: 45px;
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#whole {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 98vw;
+  height: 90vh;
+  margin-bottom: 10vh;
+}
+
+#whole #profileimage-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 20px;
+  width: 1580px;
+}
+
+#whole #profileimage-name #profileimage {
+  width: 350px;
+  z-index: 2;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+#whole #profileimage-name h1 {
+  background-color: #00ffe0;
+  padding: 10px 20px;
+  padding-left: 80px;
+  margin-left: -50px;
+  z-index: 1;
+  border-radius: 20px;
+  font-size: 60px;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify {
+  background-image: linear-gradient(45deg, #dbff00, #ff00d6, #32ffff);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: -100px;
+  padding-top: 140px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 1560px;
+  position: relative;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #navigationdefault-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #navigationdefault-socials #navigationdefault {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ae00ff), to(red));
+  background-image: linear-gradient(#ae00ff, red);
+  padding: 15px;
+  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (85px)[2];
+      grid-template-columns: repeat(2, 85px);
+  -ms-grid-rows: (85px)[3];
+      grid-template-rows: repeat(3, 85px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #navigationdefault-socials #navigationdefault i {
+  font-size: 70px;
+  text-align: center;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #navigationdefault-socials #socials {
+  margin-top: 20px;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #navigationdefault-socials #socials img {
+  width: 85px;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #aboutcontent {
+  width: 73%;
+  margin-left: 5%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+#whole #navigationdefault-socials-aboutcontent-spotify #spotify {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 230px;
+}
+/*# sourceMappingURL=App.css.map */

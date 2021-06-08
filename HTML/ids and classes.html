@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ids and Classes</h1>
+    <div id="masterBox" class="redBg">
+        This is an example of Master Box with Red Background
+    </div>
+    <div id="slaveBox" class="redBg">
+        This is an exmaple of Slave Box with Red Background
+    </div>
+
+    <div id="recessiveBox" class=yellowfont>
+        This is an example of Recessive Box with Yellow dont colour
+    </div>
+
+    <div id="dominantBox" class="yellowfont">
+        This is an example of Dominant Box with Yellow font colour
+    </div>
+
+    <div id="trueBox" class="redBg yellowfont">
+        This is an example of True Box having Red Background and Yelllow font colour
+    </div>
+    <!-- ID attribute is used as a defination variable for the whole element under the tag it is used under. The ID (variable) designated for the tag can be used in CSS to style/customize it. Each tag has to have a different/unique ID -->
+    <!-- Class is used to customize/style different tags/elements at once instead of customizing it using the ID tag. -->
+    <!-- ID = Species of the tag,
+     Class = Genus of the tag -->
+    <!-- There can be multiple CLASSES for  1 Tag. To write more classes than 1 just put a space after the current class and write the next class you want the tag to follow. The tag/element will follow all the classes it has been designated to. E.g. In this case, both the Red Background and the Yellow Font Colour -->
+
+    <!-- Emmet/Shorcuts -->
+
+    <span class="redBg"></span>
+    <div class="redBg"></div>
+    <p class="redBg"></p>
+
+    <!-- TO reduce writting the class under the tag, just write the text type, then decimal without space and then the class you want the tag to follow without space -->
+    <!-- e.g. paragrpah for class yellow font (styled in CSS)
+      p.yellowfont -> click enter -> <p class = "yellowfont"></p> -->
+
+    <span id="mainBox"></span>
+    <p id="mainBox"></p>
+    <div id="mainBox"></div>
+    <em class="yellowfont" id="mainBox"></em>
+    <!-- TO reduce writting the ID under the tag, just write the text type, then hashtag without space and then the ID you want the tag to follow without space -->
+    <!-- e.g. paragrpah for ID dominantBox (styled in CSS)
+      p#dominantBox -> click enter -> <p id = "dominantBox"></p> -->
+    <!-- To do it together, write the id with (#) and class with (.). For multiple, use multiple decimals and hashtags  -->
+    <!-- e.g.  em.yellowfont#mainBox -> click enter <em class = "yelloowfont" id = "mainBox"></em> -->
+    <!-- To multiply lines/shortcuts, just put a (*) and then the number you want to the element to be copied -->
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+            This is a container
+        </div>
+
+        This is time in <div id="timedisplay"></div>
+
+        <script>
+            console.log("This is an example of a text on JavaScript Console Log")
+
+            // setTimeout -> This is use to run the function once after a time delay
+            // clearTimeout -> This allows us to run the function after uniform delays 
+
+            function egofsettimeout() {
+                console.log("I want a good idea")
+            }
+
+            setTimeout(egofsettimeout, 2000);
+            // this will give an output after ____ milliseconds of time. The example goes like this. 
+            // First, you have to make a function prior to using the setTimeout. Then we can use setTimeout. 
+            // Format goes like this -> setTimeout (_function_, _milliseconds_)
+
+            function varsetTimeout(Subject, Subject2, Subject3) {
+                console.log(`I can write this subject: ${Subject}, ${Subject2}, ${Subject3}`);
+                if (Subject3 = null) {
+                    let Subject3 = "_";
+                }
+
+            }
+
+            setTimeout(varsetTimeout, 1000, "Science", "Mind Development", null)
+            // here, we can define the variable(s) inside the seTimeout syntax as after the delay of the function action
+
+            let timeOut = setTimeout(egofsettimeout, 3000)
+            setTimeout(() => {
+                console.log(timeOut)
+            }, 3000);
+
+            // the setTimeout can also be written as this. The snippet will automatically type the whole format. And then you can write the whole action inside it along with the time delay for it.  
+
+            // this will give a unique numeric ID for the whole setTimeout function. I
+
+
+            clearTimeout(timeOut);
+
+            // this will not display the action that is desired. This is used on website where the programmers want the Sign up Form to pop up after some time but the user has already done it. 
+
+            function egofsetinterval() {
+                console.log("This is an example of setInterval delay")
+            }
+
+
+            setInterval(egofsetinterval, 4000)
+
+            // these properties can also be used to display time
+            var time;
+
+            function displayTime(time) {
+                time = new Date();
+                document.getElementById('timedisplay').innerHTML = time;
+                console.log (time)
+                return time;
+            }
+setInterval (displayTime,1000 )
+
+
+// setInterval(() => {
+//     document.getElementById('timedisplay').innerHTML = displayTime(time);
+//     console.log (displayTime(time))
+// }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

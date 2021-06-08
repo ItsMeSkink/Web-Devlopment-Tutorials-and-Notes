@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    style
+        include Pug+MongoDB-Form.css
+
+
+  </head>
+  <body>
+    <div id="heading">
+      <header id="title">
+        CollaKnow Sign Up
+      </header>
+    </div>
+
+    <form action="/submit" method="post">
+
+      <span id="firstname">
+        <label for="FirstName">First Name</label>
+        <input type="text" name="FirstName" id="FirstName">
+      </span>
+
+      <span id="lastname">
+        <label for="LastName">Last Name</label>
+        <input type="text" name="LastName" id="LastName">
+      </span>
+
+      <span id="email">
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email">
+      </span>
+
+      <span id="age">
+        <label for="Age">Age</label>
+        <input type="text" name="Age" id="Age">
+      </span>
+
+      <span id="aspects">
+        <label for="Aspects">Aspects</label>
+        <input type="text" name="Aspects" id="Aspects">
+      </span>
+
+      <button id="submit">SUBMIT</button>
+
+
+
+    </form>
+
+
+  </body>
+</html>

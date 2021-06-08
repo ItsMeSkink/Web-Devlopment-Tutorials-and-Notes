@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            This is just an example of a text
+        </div>
+
+
+        <script>
+            function eh() {
+                console.log("What do you intend to share with avst world that is wating for your knowledge to be spread out")
+            }
+
+            eh()
+
+            // there is another way of writing a function in JS
+
+            eh1 = () => {
+                console.log("What do you desire to know about?")
+            }
+
+            eh1()
+
+            setTimeout(() => {
+                console.log("This is a setTimeout function running after 3 seconds")
+            }, 3000);
+
+            // the above double brackets after the seTimeout is for defining the function of the action that will be run after a course of time. 
+
+            let sum = (a, b, c) => {
+                let d = a + b + c;
+                return d;
+            }
+
+            let sum1 = sum(13, -12, 2)
+
+            console.log(sum1)
+
+            let sum2 = (e, f, g) => e + f + g;
+            // this is another way of specifying a function which only consists of a single line
+            let sum3 = h => h2;
+            // for a single variable in the function, we have the option to use the brackets and also to use them.
+
+            let object1 = {
+                // this is an object
+                users: ["user1", "user2", "user3", "user4"],
+                names: ["Lakshya", "Tanmay", "Shourya", "Manan"],
+                speak() {
+                    this.names.forEach((student,) => {
+                        console.log("The name of the employees are " + student)
+                        console.log("Welcome" + this)
+                        // in this, the student is a function but the function word is not written. This enables the variables inside to access the one outisde.
+                    })
+                }
+            }
+
+            object1.speak();
+        </script>
+    </body>
+</html>

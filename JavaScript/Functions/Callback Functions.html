@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="user">
+            <ul id="userli">
+
+            </ul>
+        </div>
+
+
+
+        <script>
+
+            const users = [
+                {
+                    name: "Lakshya",
+                    surname: "Monga",
+                    age: 15
+                },
+                {
+                    name: 'Shourya',
+                    surname: "Sethi",
+                    age: 16
+                },
+                {
+                    name: "Manan",
+                    surname: "Sethi",
+                    age: 15
+                },
+                {
+                    name: "Tanmay",
+                    surname: "Garg",
+                    age: 14
+                }
+            ]
+
+            function successUser(user, callback) {
+                setTimeout(function () {
+                    users.push(user) // this will add an object to the array 'users'. the object would be defined in the 'user' variable
+                    console.log('THE USER HAS BEEN REGISTERED')
+                    callback() // this would be executed when the first task is over. also in the case when the task before the callback is not executed, this is executed. 
+                    // here the callback would be a different function which would be specifed in the new function. 
+                    // it would be fired after the task before that is over.
+                    // it is like return, first analyzes that above code and then callbacks it. 
+                }, 4000)
+            }
+            function printUser() {
+                setTimeout(function () {
+                    let blankStr = ""
+                    users.forEach(function (user) {
+                        console.log('the user is printed')
+                        // here the DOM would be populated and anything could be printed in the console.log. the 'forEach' function is used to print each object in the array.
+                        let userDOM = document.getElementById('userli') // this reads the element with id 'userli' in the DOM
+                        blankStr += `<li> ${user.name + user.surname + user.age}  </li>  ` // this is the whole STRING that would be printed in the DOM as HTML
+
+                        userDOM.innerHTML = blankStr // this will add the 'blankStr' variable in the DOM. 
+
+
+                    })
+                }, 1000)
+            }
+
+            let newUser = { name: "Aastha", surname: "Garg", age: 19 }
+            successUser(newUser, printUser) // this means that the newUser function which takes 4 seconds would be processed first before the callback. after the users have been pushed in the array (as per the function), the callback would be fired which would display the users in the DOM (as per the funcion)
+
+
+
+
+
+        </script>
+    </body>
+</html>

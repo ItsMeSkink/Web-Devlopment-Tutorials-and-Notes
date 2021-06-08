@@ -1,0 +1,61 @@
+.subject {
+    width: 1100px;
+    border: 10px solid rgb(255, 0, 255);
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    background-color: salmon;
+}
+
+
+/* margin : auto ; is for aligning the whole element in the center. It calculate the distance from the left and right. It is equal from both the sides, that why it was in the center */
+
+.Science {
+    border: 10px groove rgb(87, 6, 19);
+    padding: 30px;
+    margin: 10px;
+    background: yellowgreen;
+}
+
+#Physics {
+    float: left;
+    width: 48%;
+}
+
+#Chemistry {
+    float: right;
+    width: 48%;
+}
+
+#Biology {
+    clear: both;
+    text-align: center;
+}
+
+
+/* the clear tag is for over-riding the float tag. If the previous float text is overlapping the following text, clear will override it and not let the float disrupt the following text. But the direction which specifies the side of text not to be disrupted. Like in this case "left". If any of the float does not agree the condition of clear, it will still be disturbed by the float disagreeing. To even override that we can write clear: both ;
+The following para (added) to the last para would also be formatted  */
+
+#chemistrypara {
+    text-align: right;
+}
+
+#mathspara {
+    text-align: justify;
+}
+
+
+/* text align is to align the text left, right, center etc. */
+
+.img {
+    display: block;
+    margin: auto;
+}
+
+
+/* this is a code for bringing the image to the center */
+
+#center {
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <p>this is a container</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script>
+            console.log("this is a seperate document for the JavaScript File");
+
+            let Subject1 = "Physics"
+            let Subject2 = "Mind Development"
+            let Subject3 = "Biology"
+            let Subject4 = "Chemistry"
+            let GoodSub = "I can write this Subject: "
+            let SubGood = " is the Subject that I can write"
+
+            console.log("Favourite subject is " + Subject1)
+            console.log("Favourite subject is " + Subject2)
+            console.log("Favourite subject is " + Subject3)
+            console.log("Favourite subject is " + Subject4)
+
+
+            console.log("_________________________")
+
+
+
+
+            function favsub(Subject1, GoodSub, SubGood) {
+                console.log("My favourtie subject is " + Subject1)
+                console.log(GoodSub + Subject1)
+                console.log("____________________________" + Subject1 + SubGood)
+            }
+
+
+
+
+            favsub(Subject1, GoodSub, SubGood);
+            favsub(Subject2, GoodSub, SubGood);
+            favsub(Subject3, GoodSub, SubGood);
+            favsub(Subject4, GoodSub, SubGood);
+
+
+            function algorithm(a, b, c) {
+                let d = a + b + c;
+                return d;
+            }
+
+            let result = algorithm(20, 15, 1)
+            console.log(result)
+
+// here after the function tag, we can define anything a function. Ater the function name, we have to put the (variable_name_the_function_is_put_for) which in this case is Subject1.
+// Inside the curly brackets, there would be the action for the funciton which in this case is console.log("My favourite subject is " + Subject1). 
+// function ___functionvariable___ (Variable) {  action  }
+// once a variable is defined in the brackets, it is connected to the same one inside the curly brackets which means that it has to be also mentioned in the called function
+
+
+// d variable is being outputted here. and further action in the curly brackets are not executed
+
+// this is used to prevent repeatations of multiple actions
+// multiple variable function can also be called in for once seperated by a comma.
+
+// instead of doing this, we can include a function that can shorten this
+        </script>
+    </body>
+</html>

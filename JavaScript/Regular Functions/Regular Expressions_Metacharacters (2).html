@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            let randomString = "this is the second tutorial on the regular expressions based on metacharcters. randomCharacter^"
+
+            var i = 0;
+            function regularFunction(regularExpression) {
+                i++
+                console.log(i)
+                let execfunction = regularExpression.test(randomString)
+
+                if (execfunction) {
+                    console.log('the expression matches')
+                    console.log(regularExpression.exec(randomString))
+                }
+                else {
+                    console.log('the expression does not match')
+                }
+                console.log('____')
+            }
+
+
+
+            regularFunction(/the/)
+
+            // __________________________________________________________________________________________________________________
+
+  
+            regularFunction(/isy/)  // this will yield false here because this expression does not exist in the whole String
+
+            // __________________________________________________________________________________________________________________
+
+            regularFunction(/^ec/) // the '^__' refers to the words that start with the charcters after the '^'
+
+            // __________________________________________________________________________________________________________________
+
+            regularFunction(/rs$/) // the '__$' refers to the whole string that ends with the charcters before '$'
+
+            //___________________________________________________________________________________________________________________
+
+            regularFunction(/tut.rial/) // the '.' in the regular function expression means variable letter charcter. it means that the . in the whole expression can be any letter respective to the other characters in the expression.  till the rest of the expression matches the charcters in the string, the '.' will read the letter from the string. for e.g. if the word is tutorial, the expression /tut.rial/ means that the '.' refers to 'o'.
+            // __________________________________________________________________________________________________________________
+
+            regularFunction(/e*ions/) // the '*' means variable letter(s) between the first letter and subsequent letters which means that this can read 0 or mroe than 0 letters that exists with respect to the whole expression in the string. it in this format -> first_letter*subsequent_letters <-
+            // it is like -> ^_....____
+            // it is the same as '.' but with multiple characters
+
+            // __________________________________________________________________________________________________________________
+
+         
+            regularFunction(/exprr?essi?ons/) // here the question marks means that the previous character is defined as optional. it means that the user is not sure whether the character exists in the string or not. 
+            // here r and i are optional. it means that the computer will read both of them. if it exists, it is true, if it does not, it is also true. here the second 'r' does not exist and the 'i' exists. the result is true
+            //___________________________________________________________________________________________________________________
+
+            regularFunction(/randomCharacter\^/) // here '\_' refers to the actual character of the string and not a metacharacter which will perfrom a function. in this case, the expression will find for the '^' symbol in the string
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

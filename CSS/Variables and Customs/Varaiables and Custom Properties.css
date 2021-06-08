@@ -1,0 +1,31 @@
+.box {
+    width: 400px;
+    height: 400px;
+    --bx-color: rgb(70, 70, 156);
+    /* -- intitiates the name of the variable and the value after th ":" specifies teh value of the variable. It means that the value after the colon has set to for the variable that can be used further.  */
+    box-shadow: -9px -9px var(--bx-color);
+    /* the variable that has been set above can be used in a property after the colon as property:var (_variable_); To include the variable, the var( has to be initiated and ended. Inside that would be the variable.  */
+    border: 6px solid red;
+    margin: 10px;
+    --bg-color: yellow;
+    background-color: var(--bg-color);
+    /* the variable only works under the particular selector. If we use the variable in other selectors, it would not work. To make it work, we have to use :root {} */
+    font: var(--fntsz);
+    color: var(--fntclr);
+    text-align: var(--fntaln);
+    align-items: var(--fntaln);
+}
+
+:root {
+    --fntclr: purple;
+    --fntsz: 20px;
+    --fntaln: center;
+}
+
+.container {
+    display: flex;
+    border: 10px solid var(--fntclr);
+    padding: 20px;
+    box-sizing: border-box;
+    align-self: center;
+}

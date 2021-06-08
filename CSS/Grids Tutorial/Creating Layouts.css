@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "navbar navbar  navbar aside"
+    "section section section aside"
+    "section section section aside"
+
+    /* the grid-template-areas provide a layout mechanism for the webpage. The elemental area for a particular element is to be specified on the selector seperately. Once that is specified, we can make the layout. To make, it we have to include the grid-template-areas tag in the parent box. The next format under that has to be 
+    'grid_area_variable*x'
+    'grid_area_variable*x'
+    'grid_area_variable*x'
+    
+    each line represent the parts into which the block element has to be divided. width 100% = grid_area_variable*x + gaps. There should be equal amount of grid_area_variables in each line. 1 variable represents 1fr
+    
+    */;
+}
+
+
+.text {
+  background-color: red;
+  border: 3px solid green;
+  font-weight: bolder;
+}
+
+#navbar {
+  grid-area: navbar;
+}
+#section {
+  grid-area: section;
+}
+#aside {
+  grid-area: aside;
+}

@@ -1,0 +1,24 @@
+.container {
+display: grid;
+grid-gap: 20px;
+
+/* 
+--grid-template-columns: repeat(4, 1fr);-- 
+*/
+
+justify-content: center;
+/* this will bring the whole container element to the center of the screen page.  */
+
+/* 
+--grid-template-columns: repeat(auto-fit, 200px);-- */
+
+/* auto-fit value will enable the elements to fit in the whole page according to the width value after the ",".  */
+
+grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+/* explanation: minmax refers to the the minimum width of an element to the maximum width with respect to the whole page width. This property is used to make responsive websites.  */
+}
+
+.box {
+border: 3px solid black;
+background-color: rgb(255, 214, 255);
+}

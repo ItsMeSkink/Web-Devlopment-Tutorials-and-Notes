@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+
+
+        <script>
+
+
+            class user {
+                constructor(firstName, lastName, email, age, employementStatus, userName) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.email = email
+                    this.age = age
+                    this.employementStatus = employementStatus
+                    this.userName = userName
+                }
+                // this is a class that store a template that can be used to make prototypes and ES6 classes
+
+
+
+                credentials() {
+                    return `
+                        Your credentials are :
+                        First Name = ${this.firstName}
+                        Last Name = ${this.lastName}
+                        Email = ${this.email}
+                        Age = ${this.age}
+                        Empolyement Status = ${this.employementStatus}
+                        Username = ${this.username}
+                    `
+                }
+
+                privelleges() {
+                    if (this.employementStatus == 'student') {
+                        return 'You are eligible for special student features loaded with exciting things'
+                    }
+
+                    if (this.employementStatus == 'unemployeed') {
+                        return 'You are eligible for having daily tips how to manage money. '
+                    }
+
+                    if (this.employementStatus == 'employeed') {
+                        return 'You are eligible for daily updates and you are eligible to advertise'
+                    }
+                }
+            }
+
+            let user1 = new user
+            console.log(user1) // this will output all variables as undefined
+
+            let user2 = new user('Lakshya', 'Monga', 'lakshyamonga@hotmail.com', 15, 'student', 'skink')
+            console.log(user2) // this will output the values that are defined in the new user above as a constructor
+            console.log(user2.credentials()) // this will carry out the function credentials() that would print `__`
+            console.log(user2.privelleges())
+
+
+            class userformat2 extends user {
+                // this would inherit the functions/constructors from another class which in this case is 'user'
+                constructor(firstName, lastName, email, age, employementStatus, userName, languagePreferred) {
+                    super(firstName, lastName, email, age, employementStatus, userName) // super refers to the constructor of the class this was inherited from
+                    this.language = languagePreferred
+                }
+
+                language() {
+
+                    if (this.language == 'english') {
+                        return 'No problem in translation'
+                    }
+
+                    if (this.langauge == 'hindi') {
+                        return 'Aap chinta na karen, aap bohot hi gyani ban ne waalen hain!'
+                    }
+                }
+            }
+
+            let user3 = new userformat2('Shourya', 'Manan', 'shouryamanan@hotmail.com', 16, 'student', 'shouryamanan', 'english')
+
+            console.log(user3)
+            // console.log(user3.language()) 
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

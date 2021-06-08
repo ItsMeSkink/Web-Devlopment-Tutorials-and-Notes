@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    padding: 20px;
+    /* border: 2px solid red; */
+    margin: 30px 20px;
+    background-color: ivory;
+    box-shadow: 20px 20px green;
+    /* box-shadow is a property for adding a offset to the default element. An extra box behind the element would be formed that would be visible according to the customizations done by the programmer. The format for that would be box-shadow: (x-axis) (y-axis) (color); the positive value for x-axis would add the offest below the element box and for y-axis it would be on the right. For negative value, it would be opposite directions*/
+}
+
+#card-2 {
+    box-shadow: 20px 20px 10px purple;
+    /* the third value is to blur the outer radius of hte shadow box. It will blur the outer portion. */
+}
+
+#card-3 {
+    box-shadow: 20px 20px 10px 20px;
+    /* the fourth value is spread-radius. It will expand the size of the offset */
+}
+
+#card-4 {
+    box-shadow: 20px 20px 15px 13px rgba(12, 30, 100, 1.5);
+    /* we can also use RGBA to chose the color. A = Alpha that decides the darkness of the color of RBG. */
+}
+
+#card-5 {
+    box-shadow: inset 10px 15px;
+    /* inset in the box-shadow refers to the opposite of offset. It makes the shadow inside the box. In offset, it occurs outside the element box however in the Inset case, it occurs inside the element box.  */
+}

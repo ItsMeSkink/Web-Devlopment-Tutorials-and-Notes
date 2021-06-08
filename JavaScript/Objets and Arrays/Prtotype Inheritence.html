@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+            const newFunction1 = {
+                var1: function () {
+                    return 'xyz'
+                },
+                var2: function (name) {
+                    this.name1 = name
+                }
+            }
+
+
+
+            // this is a prototype where no object are stored. but we can store them.
+            {
+                const functionVariable1 = Object.create(newFunction1) // this is a prototype by default not an object. this would just create the prototype of the object from the function 'newFunction1'
+                // THIS LINE MEANS TO CREATE A PROTOTYPE WITH FUNCTION 'newFunction'.
+
+                functionVariable1.name = 'Lakshya' // this would define the variable 'name' in the constructor function (name) 
+
+                console.log(functionVariable1)
+            }
+
+
+            // this is not a prototype but an Object create from the function itself.
+            {
+                const functionVariable2 = new newFunction1.var2('Lakshya') // this is a object by default not a prototype. 'Lakshya' is the defination variable 'name' but stored in 'name1'. although the function (name) would be listed in the whole object prototype
+                functionVariable2.name = 'Monga' // this adds the variable 'name' to the objet whole and stored as 'name' itself and not 'name2'   
+                console.log(functionVariable2)
+            }
+
+            {
+                function functionVariable3(first, last, user, age, email) {
+                    this.firstName = first
+                    this.lastName = last
+                    this.userName = user
+                    this.age = age
+                    this.email = email
+                    // this is a simple function constructor which recieves its values from the parenthesis
+                }
+
+                functionVariable3.prototype.credentials = function () {
+                    return ` Your credentials are 
+                First Name = ${this.firstName}
+                Last Name = ${this.lastName}
+                Username = ${this.userName}
+                Age = ${this.age}
+                Email = ${this.email}
+                `
+                    // 'credentials' is a new object whole which uses 'functionVariable3' as its prototype. the variable itself is a function that receives its values form the prototype and returns it. 
+                }
+
+                var credential1 = new functionVariable3('Shourya', 'Manan', 'ShouryaManan', 'shouryamanan@gmail.com')
+                console.log(credential1) // this will print the whole object.
+                console.log(credential1.credentials()) // this will print what is returned from the credentials() function
+            }
+
+
+
+            {
+
+                function functionVariable4(first, last, user, age, email, aspects) {
+                    functionVariable3.call(this, first, last, user, age, email)
+                    this.aspects = aspects
+                }
+
+                let Tanmay = new functionVariable4('Tanmay', 'Garg', 'tanmaygarg3105', 14, 'tanmaygarg@hotmail.com', 'Science')
+                // here the PROTOTYPE is not inherited because the prototype directly address to the 'functionVariable3' and not 'functionVariable4'
+
+                functionVariable4.prototype = Object.create(functionVariable3.prototype) // this addresses that the prototype of the 'functionVariable3' would also be followed by the 'functionVariable4'. 'Object.create' creates the prototype of anything. for the functionVariable4.prototype, object.create addresses the functionVariable3.prototype
+
+
+                console.log(Tanmay)
+
+
+
+            }
+        </script>
+    </body>
+</html>

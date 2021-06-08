@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        This is a container with a text. 
+    </div>
+
+
+    <script>
+        // JSON stands for Java Script Object Notation. It is used to store and transfer data over servers. 
+
+
+        let jsonObj = {
+            name: "Lakshya",
+            Age: 14,
+            email : "wickedskink@gmail.com",
+            username : "skink",
+            Category : "Detailed",
+        }
+
+
+        console.log (jsonObj);
+
+        // in JSON, we convert the objects into Strings and then transport it over the network using the JSON properties. 
+
+        let myJsonObject = JSON.stringify(jsonObj)
+        // the whole object would be converted to String Data Type that would be used to transfer the data over any network
+        console.log (myJsonObject)
+
+        myJsonObject = myJsonObject.replace ("Detailed"," Brief")
+        // this will replace an object string with another object string. The format goes like this -> 
+        // stringifiedobject.replace ("Previous_Stringfied_Object", "Replaced_Stringified_Object")
+
+        console.log (myJsonObject)
+
+        
+        let newMyJsonObject = JSON.parse (myJsonObject)
+        console.log (newMyJsonObject)
+        // this will reverse the stringified object to its orignal data type which can be a string, number etc
+
+
+
+    </script>
+</body>
+</html>

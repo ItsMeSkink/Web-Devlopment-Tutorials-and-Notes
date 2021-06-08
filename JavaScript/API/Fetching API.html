@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <button id="button1">BUTTON 1</button>
+        <button id="button2">BUTTON 2</button>
+        <button id="button3">BUTTON 3</button>
+
+
+        <script>
+
+            let button1 = document.getElementById('button1')
+            let button2 = document.getElementById('button2')
+            let button3 = document.getElementById('button3')
+
+            button1.addEventListener('click', getData)
+            button2.addEventListener('click', getData2)
+            button3.addEventListener('click', getData3)
+
+            function getData() {
+                const url = '/data.txt' // this receives any data from any specific URL locally
+                fetch(url).then((response) => { // the data from the url is fetch/recevied and a function corresponding to it is performed
+                    return response.text() // the function returns the data from the file in form of text which is stored in the 'response' variable
+                }).then(
+                    (data) => {
+                        console.log(data) // the data in form of text stored in variable 'response' is printed in the console.log 
+                        // we have to mention it in the arrow function as a constrctor
+                    }
+                ) // fetch function also gives us a promise function which means that we can use .then and .catch functions also. 
+            }
+
+            function getData2() {
+                console.log('data is being fetched')
+                const url = 'https://api.github.com/users'
+                fetch(url).then((response) => {
+                    return response.json() // instead of putting .text in the document type, we can put .json to accept the data as JSON file
+                    console.log('data has been fetched')
+                }).then((data) => {
+                    for (i = 0; i < 5; i++)
+                        console.log(data[i])
+                    console.log('data has been printed')
+                })
+            }
+
+            function getData3() {
+                const url = 'https://my-json-server.typicode.com/typicode/demo/posts'
+                const data = '{"name": "example12dasfSCsd3334", "salary" : "500003234252230","age":"34234253" }'
+                fetch(url, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+                    .then(response => response.text())
+                    .then((text) => {
+                        // document.getElementById('responseJsonText').value = text;
+                        console.log(text)
+                    });
+            } // THIS IS NOT WORKING RIGHT NOW
+            // this is how it is dsiplayed in the potrait mode of the display
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+
+            const randomArray = [
+                'Object 1',
+                'Object 2',
+                'Object 3',
+                'Object 4',
+            ]
+
+            console.log(randomArray)
+
+            function randomIterator(values) {
+                let indexValue = 0; // the default value of the index value would remain 0 until and unless it is increased
+
+                return {
+                    next: function () {
+                        if (indexValue < values.length) {
+                            // the values.length refers to the number of object existing in the whole ARRAY.
+                            return {
+                                // this object will be returned actually 
+                                value: values[indexValue++],
+                                // it means the object which is actually being returned will be increased after this function has been called
+                                done: false
+                                // we have to confirm if the values under the array have been finished or not. this variable tells us that the values under the array have not finished
+                            }
+                        }
+                        else {
+                            return {
+                                done: true
+                                // this variable tells us that the values under the array have been finished and no more values have to be returned anymore
+                            }
+
+                        }
+                    } // here 'next' is a function which will 
+
+                }
+                // THIS WHOLE FUNCTION THAT IS BEING CARRIED OUT IS AN ITERATOR
+
+            }
+
+            const users = randomIterator([
+                'Lakshya Pratap Monga',
+                'Shourya Sethi',
+                'Manan Sethi',
+                'Tanmay Garg'
+            ])
+
+            console.log(users.next()) // the value of indexValue has been incremented. the next time this would run, next array object would be displayed
+            console.log(users.next()) // 
+            console.log(users.next()) // 
+            console.log(users.next()) // 
+            console.log(users.next()) // all the values of the array have been extinguished so the return of done would be true.
+
+            // console.log(users.next().value) -> this will yield the values of the array object in from of strings and not in the form of different objects
+
+
+
+
+        </script>
+    </body>
+</html>

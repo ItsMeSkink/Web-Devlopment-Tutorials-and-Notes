@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>FORMS</h1>
+
+    <form action="backend.php">
+        <!-- Form tag refers to the beginning of the FORM function on the website. Action Attribtue is the source/server where the form will be submitted or called the BACKEND-->
+        <div>Name:<input type="text" name="myName"> </div>
+        <!-- div = DIVISION to bring the form in a single line.-->
+        <br>
+        <div>
+            Age :<input type="number" name="myAge">
+        </div>
+        <!-- Name attribute refers to the information that will be sent to the BACKEND. e.g. myAge in this case is a variable that will be used in the BACKEND to perform a particular function-->
+        <!-- "e" letter can be used in the Number Input because it represent 10^ -->
+        <br>
+        <div>
+            Birth Date : <input type="date" name="myBirthDate">
+        </div>
+        <br>
+        <div>
+            Hobbies :<input type="text" name="myHobbies">
+        </div>
+        <br>
+        <div>
+            Email : <input type="email" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Are you interested for volunteering in the development of this website : <input type="checkbox" name="myInterest">
+        </div>
+        <!-- The Checkbox Input is for ticking or not a single question the form is asking  -->
+        <br>
+        <div>
+            Which type of topics you wish to write for : <br> Science <input type="radio" name="" checked> <br> Social Science <input type="radio" name="myTopic"> <br> Social Topics <input type="radio" name="myTopic"><br> Mental Health <input type="radio"
+                name="myTopic"><br> Self Development <input type="radio" name="myTopic"><br>
+        </div>
+        <!-- checked is an attribubte to display/make the option/checkbox CHECEKED -->
+        <!-- The Radio Input is for selection inputs e.g. Gender, Topics of interest etc. To make it a single choice the name variable should be same in all. To make it multiple all of the variables should be diffenent -->
+        <br>
+        <div>
+            Write about yourself : <br><textarea name="myTextArea" cols="90" rows="10"> </textarea>
+        </div>
+        <!-- TEXTAREA is used for providing an area to write something big -->
+        <br>
+        <div>
+            <label for="inspire">Can you Inspire People</label>
+            <input type="checkbox" name="myInspire" id="inspire">
+        </div>
+        <!-- Label is an alternate for naming the input e.g. Submit, Email, Age etc. . It has advantage over normal text that we can select the input by clicking on the text itself. It is connected to the ID specified in the attribute.-->
+        <br>
+        <div>
+            <label for="class"> Classs Studying in </label>
+            <select name="myClass" id="class">
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+            <option value="6" selected>6th</option>
+        </select>
+        </div>
+        <!-- Select Tag is for including the pop up option select for a particular question. Option is for the option which has to be selected  -->
+        <!-- Selected Attribute is to already select among all the options -->
+        <br>
+        <div>
+            Submit : <input type="submit" value="Click here to Submit">
+        </div>
+        <!-- The Value attribute in Submit Input is for the text that is to be diplayed on the button which will be used to submit-->
+        <br>
+        <div>
+            Clear All : <input type="reset" value="myReset">
+        </div>
+        <!-- Reset Attribute is to clear all the input written by the user -->
+        <br>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+.container {
+    margin: 50px 60px;
+    display: block;
+    width: 466px;
+    margin: auto;
+}
+
+input {
+    display: block;
+}
+
+input[type='text'] {
+    padding: 46px;
+    border: 4px solid red;
+}
+
+
+/* this is for selcting a particular input type to customize wihtout using class. */
+
+a[target] {
+    font: 68px violet;
+}
+
+a[target='_self'] {
+    background-color: teal;
+    display: block;
+    font: 35px italic red;
+}
+
+li:nth-child(3) {
+    color: blueviolet;
+}
+
+
+/* this target a specific repeated element in same parent on the basis of its sequence number.
+In this case, the parent was li and the number of child targetted was 3 */
+
+li:nth-child(2n+0) {
+    color: rgb(226, 43, 43);
+}
+
+
+/* this target each fourth repeated element. */
+
+li:nth-child(odd) {
+    color: rgb(21, 255, 0);
+}
+
+
+/* elements in odd sequence will be affected */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+    
+        <div id="container">
+            This is text
+        </div>
+        <div id="displaytime1"></div>
+        OR
+        <div id="displaytime2"></div>
+        _____
+        <div id="displaytime3"></div>
+        __________
+        <div id="displaytime4"></div>
+
+        <script>
+            console.log("This is for Date and Time function")
+
+            // to print the live date we have to write the following
+            function livetime1() {
+                let time1 = new Date()
+                return time1;
+            }
+
+
+            setInterval(() => {
+                document.getElementById('displaytime1').innerHTML = livetime1();
+            }, 0);
+
+
+            // OR
+
+
+            function livetime2() {
+                let time2 = new Date();
+                document.getElementById('displaytime2').innerHTML = time2
+            }
+
+            setTimeout(livetime2, 0)
+            setInterval(livetime2, 0)
+
+
+            function livetime3() {
+                let time3 = new Date("2020-12-31")
+                document.getElementById('displaytime3').innerHTML = time3;
+            }
+
+            setInterval(livetime3, 0)
+
+            // we can get individual dates and times here also
+
+
+
+
+
+
+
+
+            setInterval(() => {
+                let time4 = new Date();
+                let year = time4.getFullYear();
+                let month = time4.getMonth();
+                let date = time4.getDate();
+                let hours = time4.getHours();
+                let minutes = time4.getMinutes();
+                let seconds = time4.getSeconds();
+                document.getElementById('displaytime4').innerHTML = (` <br> <br> <br>Year: ${year} <br> Month: ${month} <br> Date: ${date} <br> Hours: ${hours} <br> Minutes: ${minutes}  <br> Seconds: ${seconds}`)
+
+              
+
+            }, 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

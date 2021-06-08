@@ -1,0 +1,95 @@
+.container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "nav nav nav"
+    "section section aside"
+    "footer footer footer";
+}
+
+@media only screen and (max-width: 100px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 200px) {
+  body {
+    background-color: green;
+  }
+}
+@media (min-width: 200px) and (max-width: 300px) {
+  body {
+    background-color: blue;
+  }
+
+  .container {
+    grid-template-areas:
+      "nav "
+      "section "
+      "footer ";
+  }
+  aside {
+    display: none;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  body {
+    background-color: purple;
+  }
+  span {
+    display: block;
+    text-align: center;
+  }
+  .container {
+    grid-template-areas:
+      "nav "
+      "section "
+      'aside'
+      "footer ";
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  body {
+    background-color: orange;
+  }
+
+  .container {
+    grid-template-areas:
+      "nav "
+      "section "
+      "aside "
+      "footer ";
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* this part of the code is only to test whether the responsive design system is working or not. */
+
+.border-now {
+  background-color: blanchedalmond;
+  padding: 10px;
+  border: 3px solid green;
+}
+
+nav {
+  grid-area: nav;
+}
+
+section {
+  grid-area: section;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+
+
+
+
+        <script>
+
+            // we can store some values on the browser during each session. It is seen in Application part of the inspect 
+            // we can also store some values on the computer itself through the browser. It would be stored even after you close your tab
+
+
+            localStorage.setItem('Name', "Lakshya") // this will store item on the broweser
+            localStorage.setItem('Age', 15)
+            localStorage.setItem('Email', 'wickedskink@gmail.com')
+            localStorage.setItem('Aspect', 'Science and Innovation')
+
+            let Name = localStorage.Name
+            let Age = localStorage.Age
+            let Email = localStorage.Email
+            let Aspect = localStorage.Age
+
+
+            console.log(Name)
+            console.log(Age)
+            console.log(Email)
+            console.log(Aspect) // this will display the particular variables
+            console.log(localStorage) // this will show how much data has been stored
+
+
+            // localStorage.clear() this will clear out all the data 
+
+            // localStorage.removeItem('Email'). this will clear the specific Item in the localStorage
+
+            let userName = [
+                'Lakshya',
+                'Shourya',
+                'Manan',
+                'Tanmay',
+                'Aastha'
+            ]
+
+            localStorage.setItem('usernames_string', userName)
+            console.log(localStorage.usernames) // when we put the whole array into one localStorage.setItem, it converts the whole arrayinto string and then store it into just one variable on the localStorage. -> Lakshya, Shourya, Manan, Tanmay, Aastha
+
+            localStorage.setItem('usernames_array_string', JSON.stringify(userName)) // JSON.stringify() will store the an array as an array itself instead of a string. ->  ['Lakshya', 'Shourya', 'Manan', 'Tanmay', 'Aastha'] <-. but this is still string which is displayed as a string.
+            console.log(localStorage.usernames_array_string)
+
+
+            let usernames = localStorage.getItem('usernames_array_string')
+            console.log(usernames)
+
+            let username1 = JSON.parse(usernames)
+            console.log(username1) // this will store the array as an array instead of string.  
+
+
+            sessionStorage.setItem('signin', localStorage.Email) // sessionStorage have the same syntaxes but it is only used till the window is open
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

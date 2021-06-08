@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="con">
+            this is about loops
+        </div>
+
+        <script>
+            console.log("For Loop")
+
+            let i = 0;
+            for (i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            // the for loop is used for reducing repetations of progressing values.
+            // how it works?
+            // for (i = startvalue; i < endvalue; i ++). The startvalue is generally 0. End value can be anynumber > 0. and then how the numbers are progressing. 
+
+            let Subjects = ["Science", "Social Science", "Mind Development", "Language", "Mathematics"]
+
+            for (let i = 0; i < Subjects.length; i++) {
+                let subs = Subjects[i];
+                console.log("My favourite subject is " + subs);
+            }
+            // for loop can also be used in Arrays just like this
+            // First the array is defined with the elements in it whether numerical or String or anything. 
+            // As discussed earlier to print a single Array element, we use Array_Name[numberth_of_element]. The the variable or its container stores that value and act according to it. 
+            // Instead of printing all the array_elements by writting individual element numbers, we can use for to define the number. The number of array_elements can be defined by using the array_name.length instead of counting. Then with the progressing number we can use array_elements to print all the elements. 
+
+            Subjects.forEach(
+                function (subfuc) {
+                    console.log(`${subfuc} is my favourite subject`)
+                }
+            )
+            // with this we can define what will happen to each element in the Array
+            // the function inside the function .forEach will define what variable will each be assigned progressively and carry out the action which is written under it. 
+
+            for (sub of Subjects) {
+                console.log(`Subjects like ${sub} are chosen by differnt people to write`)
+            }
+            // this will behave equal to the __.forEach>function. of loop is used in that. 
+
+            // THESE ARE THE THREE WAYS TO DISPLAY THE ELEMENT INSIDE THE ARRAY TO BE DISPLAYED
+
+            let employees = {
+                a: "Laskhya",
+                b: "Shourya",
+                c: "Manan",
+                d: "Vishal",
+            }
+
+            for (name in employees) {
+                console.log(` Employee ${name} name is ${employees[name]}`)
+            }
+            // for objetcs, in is used. 
+
+            let b = 0;
+
+            while (b < 10) {
+                console.log(`${b} is less than 10 `);
+                b++;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            var i = 0;
+            function regularFunction(regularExpression) {
+                i++
+                console.log(i)
+                let execfunction = regularExpression.test(randomString)
+
+                if (execfunction) {
+                    console.log('the expression matches')
+                    console.log(regularExpression.exec(randomString))
+                }
+                else {
+                    console.log('the expression does not match')
+                }
+                console.log('____')
+            }
+
+            const randomString = 'THIS IS THE INITIALIZATION OF THE SHORTHAND ASSERTION PART OF THE SHORTHAND CHARACTERS'
+
+            regularFunction(/INIT(?=I)/) // here the (?=_) means the charcters respective to the regular expression should fit with what's after the '=' in the asssertion. 
+            // it is similar to a single character in character set [].
+            // in this case, after INIT, I should occur or the yield would be false
+
+            regularFunction(/INIT(?=IALI)/) // here multiple characters are being read. if the string does not matches the respective regular expression, the yield would be false.
+            // in this case the yield is true
+
+            regularFunction(/SHORT(?!HAND)/) //the '!' means unequal to. if the expression after the ! matches the respective string, then it will yield false and if it does not match, the yield would be true. 
+            // in this case, 'HAND' occurs after 'SHORT' in the string so the yield would be false.
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+        // OBJECT PROTOTYPE
+
+        let newObject = {
+            productName: 'Solar Inverter',
+            productCateogory: 'Electronics',
+            productPrice: 1500,
+            productCreator: 'Lakshya Pratap Monga',
+            prodcutManager: 'Lakshya Pratap Monga',
+            productManufacturer: 'collaknw inc.',
+
+            // here 'newObject' variable is the prototype according to which the other functions works and responds. it is also defined as where the variable/function was initiated and defined
+        }
+
+        function product (productName, productCateogory, productPrice, productCreator, productManager, productManufacturer) {
+            this.productName = productName
+            this.productCateogory = productCateogory
+            this.productPrice = productPrice
+            this.productCreator = productCreator
+            this.productManager = productManager
+            this.productManufacturer = productManufacturer
+
+            // here the 'product' function is the prototype according to which the enviornment workds and responds to.
+        }
+        console.log(newObject)
+       
+        product.prototype.getName = function () {
+            return this.productNamename
+            middlename
+            surname
+            email
+            phonenumber
+            age
+            aspects
+            // this will set a new Prototype function. it will reset the default one and put another one. 
+            // in this case, the protype will tell use where the function would inherit its values
+        }
+
+        let newProduct = new product('Under Water Oxygen Generator', 'Electronics', 10000, 'Lakshya Pratap', 'Lakshya Pratap', 'collaknow inc.')
+        console.log(newProduct)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            This is a page
+        </div>
+
+
+
+        <script>
+            // Alert
+
+            alert("this is an alert")
+            // an alert sends a message through a browser saying the string above.
+            // it can't return anything except ok
+
+            let name = prompt("What is your name?")
+            // this pops up a alert like window above to type some text
+            console.log (name)
+
+            let deleteProfile = confirm("Do you want to delete your profile?")
+            console.log(deleteProfile)
+            // the options in this are "OK" and "Cancel".Ok = True, Cancel = False
+
+            if (deleteProfile == true) {
+                console.log("You have deleted your profile and you have lost the title of a legend.")
+            }
+
+            if (deleteProfile == false) {
+                console.log("You just saved yourself from losing the title of a legend. ")
+            }
+
+            let age  = prompt ("What is your age?")
+let years = 18 - age;
+
+            if (age > 18) {
+                alert ("You are eligible to Drive")
+            }
+            else {
+                alert("You are not yet eligible to try.\n" + years + " years to go buddy.")
+
+            }
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: blue;
+            background-color: salmon;
+            font-family: cursive;
+            font-size: smaller;
+        }
+        
+        body {
+            background-color: rgb(65, 207, 207);
+            /* this will set the background color for the whole WebPage */
+        }
+    </style>
+    <link rel="stylesheet" href="Introduction to CSS.css">
+
+</head>
+
+<body>
+
+    <body>
+        <h1 id="heading" class="h1a">
+            Introduction to CSS
+        </h1>
+
+
+        <span id="para" class="pa">
+        There are three types of CSS implementation:
+    </span>
+
+        <ol>
+            <li style="font-style: italic; color: red; background-color:royalblue; ">
+                This is INLINE CSS. It refers to the Style Customization within the text syntax.
+            </li>
+            <li>
+                <p>This is Internal CSS. This refers to the style customization within the document by putting the &lt;style&gt; tag within the head tag. It is outside the text tag.
+                </p>
+            </li>
+            <li>
+                <div>
+                    This is External CSS. This means that the Style customization is done outside the HTML document with the help of an additional linked file with .css extension. If 2 or more customizations are overrding each other then the text will follow the precedence.
+                    Means the one that is written after the first customization, the text will follow that. Bu tot make that an exception, put "!important" under the text tag
+                </div>
+                <li></li>
+        </ol>
+    </body>
+
+</html>

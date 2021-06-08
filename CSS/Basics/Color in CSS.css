@@ -1,0 +1,78 @@
+#namecolor {
+    color: magenta;
+    background-color: khaki;
+}
+
+
+/* this is the most common way of chosing which color to give to the text under this selector. In this an ordinary color name is typed in order to give the text the typed color */
+
+#rgbcolor {
+    color: rgba(41, 35, 199, 0.801);
+    background-color: rgb(184, 157, 180);
+}
+
+
+/* this is another way of chosing the color you need to give to the text under any selector. We know that the colors around us are a mixture of Red, Blue and Green colours at some values. The values are customized and a color is created. By customizing the values of R-G-B, we can plot a color for the text. */
+
+#hexcolor {
+    color: #1ABD62;
+    background-color: #523152;
+}
+
+
+/* this is the third way of chosing the clor that you want to assign to the text under a selector. Hexa Decimals are unique values of each color that can be used to assign a color. We can write the hexa decimal code instead of the color name after color: to apply.  */
+
+#bg {
+    background-color: rgba(0, 217, 255, 0.795);
+    height: 100px;
+    width: 700px;
+}
+
+
+/* with the height and width property, we can customize the height and width we want to give to the background color of the font/text. */
+
+#border {
+    border-color: black;
+    border-style: inset;
+    background-color: violet;
+    height: 100px;
+    width: 750px;
+    border-color: rgb(57, 233, 13);
+    border-radius: 13px;
+}
+
+#border2 {
+    background-color: yellow;
+    border-top: 4px solid violet;
+    border-right: 7px solid green;
+    border-bottom: 8px solid black;
+    border-left: 5px solid red;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 23px;
+    line-height: 5em;
+}
+
+
+/* we can write the border properties in one line instead of 3 seperate lines for the width, style and the color. Instead of border-width, border style and border-color to be written sperately, we can write border: __px type color ; */
+
+#bg2 {
+    height: 1110px;
+    width: 1000px;
+    border: 4px solid blue;
+    background-image: url('https://i.pinimg.com/originals/e0/38/a5/e038a5efdc6c8fbccd8856625182065f.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: maroon;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+
+/* with backrground-image property we can put a custom image instead of a solid color behind the text for the background. By default it will repeat itself over the whole background area. To make it non-repeatable/a single image add background-repeat: no repeat; under the selector. 
+    
+    To change the image's postion you can write background-postion:__position value____ ; and then designate its position. Center will be default in the center of the whole background but if we write center top, then the text will align on the top center. Other alignments are similar. e.g. top top will be where the text starts (i.e. top left)
+    
+    To align the text within the background space, we can use text-align:__postion__; to specify where the text shall align*/

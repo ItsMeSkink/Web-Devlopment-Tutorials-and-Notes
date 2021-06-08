@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+
+            // a Set stores unique values
+            const newSet = new Set() // this is how we create a new set
+            console.log(newSet) // till now this will chow empty
+
+            newSet.add('Lakshya') // this will add a new object to the Set
+            newSet.add('Lakshya') // if we add a same value as before, it would not be added. it would be ignored
+
+            newSet.add('Monga') // this is the second object added to the Set
+            newSet.add(13) // integer/float
+            newSet.add(true) // boolean
+            newSet.add(false)
+            console.log(newSet)
+
+
+            const newSet1 = new Set(['firstname', 'lastname', 'username', { email: 'email', phonenumber: 'phonenumber' }]) // this is how we add objects while creating the set itself
+            console.log(newSet1)
+
+            console.log(newSet.size + ' is the size of newSet')
+            console.log(newSet1.size + ' is the size of newSet1') // this will yield the number of total objects in the whole set
+
+            console.log(newSet.has('Monga')) // this will yield either true or false respective to the existence of the object in the Set itself.
+            // in this case, it would be true
+            console.log(newSet1.has('Lakshya')) // this will yield false as there would be no string 'Lakshya' in the newSet1
+
+            newSet.delete(13) // this would delete anything that is already present in the string itself.  in this case integer 13 would be deleted
+            console.log(newSet)
+
+            console.log('__')
+
+            for (let items of newSet) {
+                console.log(items)
+            } // this would iterate the items that are present in the string itself
+
+            console.log('__')
+
+            newSet1.forEach((items) => {
+                console.log(items)
+            }) // this is another way to iterate the set using the forEach function
+
+            console.log('__')
+
+            const newArray = Array.from(newSet) // this would convert the whole Set into array
+            const newArray1 = Array.from(newSet1)
+            console.log(newArray)
+            console.log(newArray1)
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <title>AJAX</title>
+    </head>
+    <body>
+        <h1>AJAX</h1>
+        <button type="button" id="primary" class="btn btn-primary">Primary</button>
+        <button type="button" id="secondary" class="btn btn-secondary">Secondary</button>
+        <button type="button" id="tertiary" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+        <script>
+
+            let primary = document.getElementById('primary') // reads the HTML element with id as primary
+            primary.addEventListener('click', primaryButtonFunction) // adds and event what will happen when it is clicked
+
+            function primaryButtonFunction() {
+                // this will represent the xhr object -> XMLHttpRequest
+
+                const xhr = new XMLHttpRequest(); // this will call the XHR object in the function that would be responsible for performing other functions
+
+                xhr.open('GET', 'data.txt', true) // this means that the xhr 'get' the data from the 'data.txt' file which would be 'asynchronous' meaning that it would not be blocked
+
+                console.log('the button is working') // this helps us to test whether the button is working or not
+
+                xhr.onprogress = function () {
+                    // this tells us what will happen while the function .open is being carried out
+                    console.log('THE PROCESS IS BEING CARRIED OUT')
+                }
+
+                xhr.onreadystatechange = function () {
+                    console.log('the ready state is ' + xhr.readyState)
+                    // this would give out the readyState. readyState property holds the status for any XHLHttpRequest
+                }
+
+
+                xhr.onload = function () {
+                    // this tells us what will happen after the function has been carried out
+                    console.log('THE PROCESS HAS BEEN CARRIED OUT')
+                    console.log(this.responseText) // this prints the data that has been read from the 'data.txt' file
+
+                    if (this.status == 200) {
+                        console.log(this.responseText)
+                        // this is when the connection has been successfully made and the data is received
+                    }
+
+                    else {
+                        console.error('ERROR HAS BEEN OCCURED') // this will 
+                        // this represents that what will happen when an error will be occured 
+                    }
+                }
+
+                // the request has not been sent yet. only told where to get it. 
+
+                xhr.send() // this will send the request to get the data from the 'data.txt' file
+
+
+            }
+
+
+            let secondary = document.getElementById('secondary')
+            secondary.addEventListener('click', secondaryButtonFunction)
+
+            function secondaryButtonFunction() {
+
+                const xhr = new XMLHttpRequest()
+
+
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true)
+                console.log('the button is working')
+
+
+                xhr.onprogress = function () {
+                    console.log('THE PROCESS IS BEING CARRIED OUT')
+                }
+
+                xhr.onload = function () {
+                    console.log(xhr.responseText) // this would print whatever would be received from the static file url 'https://jsonplaceholder.typicode.com/todos/1'
+                }
+
+                xhr.send()
+
+                console.log('ON PROGRESS') // this would be shown after receiving the data from any file. because it would be processed before the data has been read
+
+            }
+
+            let tertiary = document.getElementById('tertiary')
+            tertiary.addEventListener('click', tertiaryButtonFunction)
+
+            function tertiaryButtonFunction() {
+                
+                const xhr = new XMLHttpRequest()
+
+                xhr.open('GET', 'http://dummy.restapiexample.com/api/v1/employees', true)
+
+
+                xhr.onload = function() {
+                    console.log('the function is being carreid out')
+                    console.log(xhr.responseText) // this will print the 'params' variable data that is being used by 'POST' method
+
+                    let object = JSON.parse(this.responseText)
+                    console.log(object) 
+                }
+
+                xhr.send()
+            }
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

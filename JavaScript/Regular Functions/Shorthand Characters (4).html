@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+
+            var i = 0;
+            function regularFunction(regularExpression) {
+                i++
+                console.log(i)
+                let execfunction = regularExpression.test(randomString)
+
+                if (execfunction) {
+                    console.log('the expression matches')
+                    console.log(regularExpression.exec(randomString))
+                }
+                else {
+                    console.log('the expression does not match')
+                }
+                console.log('____')
+            }
+
+            const randomString = 'THIS IS THE INITIALIZATION OF SHORTHAND CHARACTER TUTORIAL. THIS IS A RANDOM COMBINATION -> --AzYs1Random . THIS IS A RANDOM COMBINATION OF NUMBERS aa234753. THIS IS A COMBINATION OF WHITESPACE CHARACTERS_     _'
+
+            regularFunction(/THIS/)
+
+            regularFunction(/\wRandom/) // here \w means reading any alphabet, number, _ or - . this is a single character
+
+            regularFunction(/\w+Random/) // here \w means reading one or more than one alphabet or number . this is multiple characters. these are the word characters
+
+            regularFunction(/\WAzYs/) // the \W (capital W) here means reading a non-word character like =+!@#$%^&*()<>?:"|{}[];'\/.,`~ etc.
+
+            regularFunction(/\W+AzYs/) // the \W+ is for reading multiple non-word charcters in the respective string
+
+            regularFunction(/aa\d/) // the \d reads a single digit with respect to the rest of the regular expression in the respective string
+
+            regularFunction(/aa\d+/) // the \d+ reads multiple digits 
+
+            regularFunction(/aa\D/) // the capital \D here means a non digit character
+
+            regularFunction(/\D+aa/) // the \D+ here means multiple digits
+
+            regularFunction(/\sIS/) // the \s here means reading whitespace character like -> space , tab   , etc
+
+            regularFunction(/CHARACTERS_\s+/) // the \s+ here means reading multiple whitespace characters 
+
+            regularFunction(/NUMBERS \S/) // reads non-whitespace charcter single
+
+            regularFunction(/NUMBERS \S+/) // reads non-whitespace characters multiple
+
+            regularFunction(/COMBINATION\b/) // here \b refers to a whitespace character which differenciates one word from another. 
+
+        
+
+            regularFunction(/COMBINATION\B/)
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

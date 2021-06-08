@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            // PROMISE -> resolve, reject, pending
+
+            function function1() {
+                return new Promise(function (resolve, reject) {
+                    // there are two conditions for a promise that is either it is resolved or it is rejected. 
+                    const error = true
+                    if (!error) {
+                        console.log('THE PROMISE IS RESOLVED')
+                        resolve()
+                        // this says that if the there is not any error, resolve the promise and do not give any error.
+                    }
+                    else {
+                        console.log('YOUR PROMISE HAS BEEN DECLINED')
+                        reject()
+                        // this says if there is any error, the reject function would be carried out and the above arguments would be given
+                    }
+                })
+            }
+            // generally the promise function is used when we call any data from the database and use it to do some work. like if the statusCode would be 200, do some function and if the statusCode is 404 or anything, it would do some other function
+
+            function1().then(function () {
+                console.log('this is the function after the promised has been resolved')
+                // this means what will happen once the promise has been resolved
+            }).catch(function () {
+                console.log('this is the function after the promise has been rejected')
+                // this means what will happen once the promise has been rejected
+            })
+
+            // the .then function means the same as resolve function. when that is run, this is also run. we can say that the resolve function equal to .then(). to carry out. we have to write resolve() to carry out .then like a normal function
+            // the .catch function means the same as reject function. when that is run, this is also run
+
+
+            // ______________________________________________________________________________________________________________________
+
+            const users = [
+                {
+                    name: '',
+                    surname: '',
+                    age: ''
+                }
+            ]
+
+
+            function userRegister(user) {
+                return new Promise(function (resolve, reject) {
+                    users.push(user)
+                    console.log('THE USER HAS BEEN PUSHED INTO THE COLLECTION')
+                    resolve()
+                    // there is a function called userRegister which will return a promise function that will either resolve or reject that the a new user has to be included in a given array. 
+                }
+                )
+            }
+
+            function userPrint() {
+                console.log(users)
+                console.log(users[users.length - 1].name)
+                console.log(users[users.length - 1].surname)
+                console.log(users[users.length - 1].age)
+                // this would automatically print the latest data in the array. as to read anything in the array, we can use arrayName[object_serial_number-1]
+
+            }
+            userRegister({ name: 'Lakshya', surname: 'Monga', age: 15 }).then(userPrint)
+            userRegister({ name: 'Elon', surname: 'Musk', age: 49 }).then(userPrint)
+
+
+        </script>
+
+
+    </body>
+</html>

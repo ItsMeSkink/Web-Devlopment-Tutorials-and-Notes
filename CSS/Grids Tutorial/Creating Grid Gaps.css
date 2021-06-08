@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-rows: 200px 200px 500px;
+    /* this is to customize differnt row heights  */
+    grid-template-columns: repeat(5, auto)      ;
+    
+    grid-auto-rows: 200px;
+    /* grid-auto-rows is to set the height of the element succeding the specified element height in grid-template-rows.  */
+    grid-gap: 60px;
+}
+
+.box {
+    height: 200px;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-color: green;
+    font-weight: bolder;
+}

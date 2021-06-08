@@ -1,0 +1,86 @@
+.container5 {
+    border: 10px groove seagreen;
+    background-color: skyblue;
+    padding: 10px;
+    margin: 10px auto;
+    width: 2000px;
+}
+
+.btn {
+    background-color: slateblue;
+    padding: 5px;
+    border: 5px groove salmon;
+    border-radius: 20px;
+    color: silver;
+    cursor: progress;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* this is to remove the underline from the anchor tag */
+
+a:hover {
+    background-color: red;
+    color: tan;
+    font-size: 60px;
+    padding: 30px;
+    margin: 30px;
+}
+
+
+/* you can customize the button for what it is going to look like whenever the mouse pointer is above that  */
+
+a:visited {
+    background-color: turquoise;
+    color: teal;
+}
+
+
+/* you can customize the appeareance of the button when the hyperlinked button is visited  */
+
+a:active {
+    background-color: blue;
+    color: chartreuse;
+}
+
+
+/* you can customize the properties of the anchor, when it is kept click or active */
+
+
+/* with the same class/id:___ sub selector, you can customize what can the element do when it is under this condition */
+
+a {
+    text-decoration: none;
+}
+
+
+/* this is to remove the underline from the anchor tag */
+
+.btn:hover {
+    background-color: red;
+    color: tan;
+    font-size: 60px;
+    padding: 30px;
+    margin: 30px;
+}
+
+
+/* you can customize the button for what it is going to look like whenever the mouse pointer is above that  */
+
+.btn:visited {
+    background-color: turquoise;
+    color: teal;
+}
+
+
+/* you can customize the appeareance of the button when the hyperlinked button is visited  */
+
+.btn:active {
+    background-color: blue;
+    color: chartreuse;
+}

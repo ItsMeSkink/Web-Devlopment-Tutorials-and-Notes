@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script>
+
+            let windowobject = window
+            console.log(windowobject) //this will give the window object features. some of these are alert, prompt, confirm. it is a global function
+
+            // alert("THIS IS AN EXAMPLE OF ALERT WINDOW OBJECT")
+           
+            // let var1 = prompt('What is your name')
+            // console.log(var1)
+           
+            // let var2 = confirm('Do you want to change the world for better?') // ok = true, cancel = false
+            // console.log(var2)
+
+            document // this will initiate the HTML body structure that is displayed on the webpage. this is often called the DOM
+
+
+
+            let viewportinnerheight = innerHeight // this would give the height of the viewport in pixels. there is no need to write window in every window function. 
+            let viewportinnerwidth = innerWidth // this would give the width of the viewport in pixels. there is no need to write window in every window function. 
+            console.log(viewportinnerheight, viewportinnerheight) 
+
+
+
+            let viewportouterheight = outerHeight // this would give the outer height of the whole window except the start bar
+            let viewportouterwidth = outerWidth // this would give the outer width of the whole window except 
+            console.log(viewportouterheight, viewportouterwidth)
+
+
+
+            let viewportscrollx = scrollX // this would give, how much the whole webpage has been scrolled on the X axis
+            let viewportscrolly = scrollY // this would give, how much the whole webpage has been scrolled on the Y axis. Most of time this is used. 
+            console.log(viewportscrollx, viewportscrolly)
+
+
+
+            let webpagelocation = location // the window location is an object that contains the information about the website
+            console.log(webpagelocation)
+            console.log(webpagelocation.reload) // this would reload the website
+            console.log(webpagelocation.href) // this would output the whole hyperlink address or the URL of the website
+            // console.log(webpagelocation.href = 'https://lakshyamonga.ga/') //this would bring us to the URL specified after the equal sign
+
+            let webpageshistory = history
+            console.log(webpageshistory) //window.history is an object which specfies the history activity from that particular website. 
+            console.log(webpageshistory.length) //this would specfiy how many websites we have been forwarded to from the home webpage. like for example -> this HTML > youtube.com > facebook.com > instagram.com > snapchat.com.  THEN the length would be 5.
+            console.log(webpageshistory.go(-1)) // the -n or +n would would be the multiples of alt + leftarrow and alt + right arrow. how many -ns means, how much webpages earlier and viceversa for the +ns
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

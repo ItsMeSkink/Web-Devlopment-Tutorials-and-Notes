@@ -1,0 +1,68 @@
+        .container {
+            background-color: rosybrown;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box {
+            border: 4px solid red;
+            margin: 10px;
+            padding: 20px;
+            background-color: green;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        
+        #box1 {
+            animation: collaknow1 3s ease-in 0s 3 reverse;
+            /* name duration animation_movement_behaviour delay repeatations  animation_order_behaviour*/
+        }
+        
+        #box2 {
+            animation-name: collaknow2;
+            /* the text infront of the animation-name is a variable  */
+            animation-duration: 3s;
+            /* duration for which the animation will occur */
+            animation-iteration-count: 1;
+            /* number of times, the animation will occur */
+            animation-timing-function: ease-in;
+            /* the animation-timing-function is to define the end and start behaviour of the aniamtion*/
+            /* animation-delay: 2s; */
+            /* start the animation after particlur delay */
+            animation-fill-mode: forwards;
+            /* this sets the end behaviour of the element */
+        }
+        
+        @keyframes collaknow1 {
+            from {
+                width: 400px;
+                background-color: blue;
+            }
+            /* this is the starting frame of the animation. */
+            to {
+                width: 100%;
+                background-color: white;
+            }
+        }
+        /* this is the end frame of the animation */
+        
+        @keyframes collaknow2 {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                top: 250px;
+                left: 0px;
+            }
+            75% {
+                top: 250px;
+                left: 250px;
+            }
+            100% {
+                top: 0px;
+                left: 250px;
+            }
+            /* we can customize the animation by also specifying the animation at a level of percentage */
+        }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+
+        .whiteBox {
+            background-color: white;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            display: inline-block;
+        }
+ 
+
+        .imageBox {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            background-image: url(download\ \(2\).jpg);
+            position: relative;
+            top: 20px;
+            cursor: all-scroll;
+        }
+
+        .holdborderimage {
+            border: 2px solid red;
+        }
+
+        .hideborderimage {
+            border: 0px solid red;
+            display: none;
+        }
+
+        .bgcolorpostdrop {
+           background-color: rgb(0, 47, 255);
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+    <body>
+
+
+        <div class="whiteBox">
+            <div class="imageBox" draggable="true"></div>
+            <!-- draggable enables the whole element to be dragged across the screen -->
+        </div>
+        <div class="whiteBox"></div>
+        <div class="whiteBox"></div>
+        <div class="whiteBox"></div>
+
+
+        <script>
+
+            const whiteBox = document.getElementsByClassName('whiteBox')
+            const imageBox = document.querySelector('.imageBox') // this would select the elements having imageBox as its class
+
+            imageBox.addEventListener('dragstart', (event) => {
+                // here adding 'event' variable to the eventListener will make it a constructor. 
+                // the dragstart event refers to when a person clicks, holds and hover an element over the screen
+                console.log('DRAGSTART has been initiated -> 1')
+                event.target.className += ' holdborderimage' // this targets the elements with the class 'imageBox' to add 'hold' as one more class in the DOM. here a 'space' has been given before the hold to specify the difference among multiple classes
+            })
+
+            ///___________________________________________________________________________________________
+
+            imageBox.addEventListener('dragend', (event) => {
+                // the dragend event referse to when a person let go of the mouse button and release the element
+                console.log('DRAGEND has been inititiated and would be terminated soon -> 2')
+                event.target.className += ' hideborderimage' // this would be initiated after the mouse button has been released and it would remove the image completely
+                event.target.className = 'imageBox' // when the element would be left all classes would be terminated and this class would be set
+            })
+
+            ///______________THIS_ WAS_FOR_THE_IMAGEBOX_CLASS____________________________________________________________________
+
+            for (let singleWhiteBox of whiteBox) {
+                singleWhiteBox.addEventListener('dragover', (event) => {
+                    console.log('DRAGOVER has been initiated -> 3') // THIS WOULD KEEP TRIGGERING TILL THE CENTER OF THE IMAGE IS INSIDE ITS PARENT CONTAINER
+                    event.preventDefault() // this would allow us to drop the element in other elements with same classes. if this is not included, the element which is being hold would return to its orignal position again. otherwise the element would escape the parent container
+                })
+
+                ///___________________________________________________________________________________________
+
+                singleWhiteBox.addEventListener('dragenter', () => {
+                    console.log('DRAGENTER has been initiated -> 3') // THIS WOULD BE TRIGGERED WHEN ANY ELEMENT WOULD ENTER OVER AN ELEMENT WITH CLASS whiteBox
+
+                })
+
+                ///___________________________________________________________________________________________
+
+                singleWhiteBox.addEventListener('dragleave', (event) => {
+                    console.log('DRAGLEAVE has been initiated -> 4') // THIS WOULD BE TRIGGERED AFTER THE CENTER OF THE IMAGE IS OUTSIDE ITS PARENT CONTAINER AND WILL KEEP TRIGGERING TILL ITS OUTSIDE  
+                    event.target.className = 'whiteBox' // this would give default properties to the parent container after the image would leave it
+                })
+
+                ///___________________________________________________________________________________________
+
+                singleWhiteBox.addEventListener('drop', (event) => {
+                    console.log('DROP has been initiated -> 5')
+                    event.target.append(imageBox) // when the element would drop another element with class whiteBox, the element with class imageBox would be appended in it.
+                    event.target.className = ' bgcolorpostdrop' // this would add color to the parent container when the element is dropped
+                })
+            } // THERE WOULD BE 4 event listners for all elements having class whiteBox
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

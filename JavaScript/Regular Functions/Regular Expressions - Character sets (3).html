@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            // Regular Expressions
+
+
+
+            const randomString = 'THIS IS A STRING WHICH INITIATES THE TUTORIAL FOR THE CHARACTER SETS OF REGULAR EXPRESSIONS. THIS IS A RANDOM NUM8ER. THIS IS A RANDOM STRING WITH REPEATED CHARACTERS RandomRandomRandom . THIS IS A RANDOM NUMBER-ALPHABET COMBINATION 1d2d4d '
+
+            var i = 0;
+            function regularFunction(regularExpression) {
+                i++
+                console.log(i)
+                let execfunction = regularExpression.test(randomString)
+
+                if (execfunction) {
+                    console.log('the expression matches')
+                    console.log(regularExpression.exec(randomString))
+                }
+                else {
+                    console.log('the expression does not match')
+                }
+                console.log('____')
+            }
+
+            //_________________________________________________________________________________________
+            regularFunction(/TUTORIAL/)
+            //_________________________________________________________________________________________
+
+            regularFunction(/INIT[G-M]ATES/) // the character set inside the [] refers to the characters that would be read from the string. if the characters with respect to the character set is matching, the yield is true. 
+            // in this case 'I' falls between the G and M. which means that the yield woud be true
+
+            //_________________________________________________________________________________________
+
+         
+            regularFunction(/CHAR[RGF]CTER/) // the RGF in the regular expression means that either of the letters in the [] exist in the respective string w.r.t. the whole regular expression
+            // in this case neither of the letters in the [] exists in the respectice string
+            // _________________________________________________________________________________________
+
+            regularFunction(/STR[^YTI]NG/) // the '^' expression here means that it will yield false if any of the letters are existing in the respective string. it is the opposite of [xyz]
+
+            // ___________________________________________________________________________________________
+
+
+            regularFunction(/CHA[A-Z]A[ABCD]TE[^XYZ]/) // we can use multiple characacter sets also
+            // ____________________________________________________________________________________________
+
+            regularFunction(/NU[B0-9]ER/) // this would either read the letter of the number
+            // ____________________________________________________________________________________________
+
+            regularFunction(/EXPRES{2}ION/) // this reads if the respective string contains 3 S letters . this is a quantifier
+            //_____________________________________________________________________________________________
+   
+            regularFunction(/EXPRES{0,3}ION/) // this reads if the respective string contains either 0 to 3 S letters.
+
+            //_____________________________________________________________________________________________
+           
+            regularFunction(/(Random){4}/) // the () refers to a grouped regular expression that will be analyzed according to the function mentioned after the ()
+            // in this case this reads if there are 4 repeatitions of the whole regular expression inside the (). but there are 4, so it will yield false
+            //_____________________________________________________________________________________________
+
+            regularFunction(/([0-9][a-e]){2}/)  // this will read if there is a number followed by any letter between a and e, repeated 2 times
+
+            //_______________________________________________________________________________________________-
+
+
+
+        </script>
+    </body>
+</html>

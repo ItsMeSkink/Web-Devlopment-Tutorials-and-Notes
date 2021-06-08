@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&family=Reem+Kufi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&family=Reem+Kufi&family=Righteous&display=swap");
+body {
+  background-color: pink;
+}
+
+#title {
+  font-size: 60px;
+}
+
+#detailcontent {
+  font-size: 24px;
+}
+
+#briefcontent {
+  font-size: 15px;
+}
+
+.fontsize {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.fontsizes {
+  font-weight: bolder;
+}
+
+.fontsize .fontsizes {
+  font-family: "Righteous";
+}
+
+.fontsize .fontsizes:hover {
+  color: white;
+}
+
+.fontsize2 {
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bolder;
+  text-decoration: underline;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .fontsize2 {
+    background-color: green;
+  }
+}
+
+@media (max-width: 800px) {
+  .fontsize3, .fontsize4 {
+    color: cyan;
+  }
+}
+
+.fontsize4 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+/*# sourceMappingURL=index.css.map */

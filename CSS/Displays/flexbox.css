@@ -1,0 +1,67 @@
+            .container {
+                height: 444px;
+                width: 100%;
+                border: 2px solid black;
+                /* THIS INITIALIZES THE FLEX DISPLAY */
+                display: flex;
+                /* FLEX PROPERTIES FOR CONTAINER */
+                flex-direction: row-reverse;
+                /* The default property is Row but we can set as column, row reverse, column reverse. In column-reverse, the order will be reversed in the same postion. for e.g. orignal- 1-6 but in column-reverse, it would be 6-1. In row-reverse the same would happen. Row is horizontal and Column is vertical */
+                flex-wrap: wrap;
+                /* by default the wrap doesn't apply on tehe flex property but with flex-wrap we can customize it */
+                flex-flow: row wrap-reverse;
+                /* we can set the diretion and wrap property values in the flex-flow itself */
+                justify-content: space-between;
+                /* justify-content is to justify how the spacing and alignment of the elements should be around its parent box/container. Some of them equalizes margin between the elements to fit in the parent box. space-between equalizes the margin between its elements and not against the border. */
+                align-items: center;
+                /* align items is a property to align the items in the vertical axis. Center puts the element in the vertical center. flex-start/end puts the element according to the its start respective to flex-direction property.  */
+            }
+            
+            .item {
+                background-color: tomato;
+                border: 2px solid white;
+                margin: 10px;
+                padding: 5px;
+                width: 200px;
+                height: 40px;
+            }
+            
+            #item1 {
+                order: 2;
+                flex-basis: 150px;
+                flex: 2 2 220px;
+            }
+            /* flex controls the grow|shrink|basis of the element.  */
+            
+            #item2 {
+                order: 1;
+                flex-basis: 120px;
+                align-self: baseline;
+            }
+            /* flex-basis controls the height in column and width in row */
+            /* align self property is to align the single element accordingly leaving out the rest of similar elements   */
+            
+            #item3 {
+                order: 4;
+                flex-grow: 3;
+                flex-shrink: 5;
+            }
+            /* flex-grow is for letting the element cover mroe space than other.They cover equal in mobile mode but as the display  increases, the space the specified element cover also increases. Higher value among multiple elements cover the most*/
+            
+            #item4 {
+                order: 3;
+                flex-grow: 2;
+            }
+            
+            #item5 {
+                order: 6;
+                flex-grow: 1;
+                flex-shrink: 8;
+            }
+            
+            #item6 {
+                order: 5;
+                flex-shrink: 10;
+            }
+            /* we can order the items according to ourselves by just writting the values accordingly in the order proeprty. The bigger value comes at last. */
+            /* flex-shrink works when the display is shrinking and the bigger value gets to decide which one shrinks the most. */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+
+        <script>
+            let stringfunction = function (variable) {
+                console.log(variable + isa + typeof variable)
+
+                let variabletostring1 = String(variable)
+                console.log(variabletostring1 + isa + typeof variabletostring1 + ' with the first way of conversion')
+
+                let variabletostring2 = variable.toString()
+                console.log(variabletostring2 + isa + typeof variabletostring2 + ' with the second way of conversion')
+                console.log("----")
+
+            }
+
+            let numberfunction = function (variable) {
+                console.log(variable + isa + typeof variable)
+
+                let variabletostring1 = Number(variable)
+                console.log(variabletostring1 + isa + typeof variabletostring1 + ' with the first way of conversion')
+
+                let variabletostring2 = parseInt(variable)
+                console.log(variabletostring2 + isa + typeof variabletostring2 + ' with the second way of conversion and it is an Integer')
+
+                let variabletostring3 = parseFloat(variable)
+                console.log(variabletostring3 + isa + typeof variabletostring3 + ' with te third wat of conversion and it is a float')
+
+                let variabletostring4 = variabletostring1.toFixed(2) // the number inside the function will be the number of decimal places whichg would be displayed. only toFixed will not dispaly any decimal number
+                console.log(variabletostring4 + isa + typeof variabletostring4 + ' with the fourth way of conversion and it is used to display fixed number of decimals')
+
+                console.log("----")
+
+
+            }
+
+
+            const isa = ' is a '
+
+
+            console.log("_____String_function___")
+            stringfunction(13)
+            stringfunction(false)
+            stringfunction(new Date())
+            stringfunction([1, 2, 3, 4, 5])
+            console.log("----")
+            console.log("----")
+
+            console.log("_____Number_function___")
+            numberfunction('583476')
+            numberfunction('289.74236')
+            numberfunction(true) // this will give 1
+            numberfunction(false) // this will give 0 
+
+
+
+        </script>
+    </body>
+</html>

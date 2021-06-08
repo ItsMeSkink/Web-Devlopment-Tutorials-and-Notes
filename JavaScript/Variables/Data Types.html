@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+            // There are two types of Datas:
+            // Primitive and Reference
+            // In primitve, the data exists in a Stack. They are the base datas. They generally store String, Nummber, Null, undefined, Symbol
+            // in Reference the data exists in a Heap. They are the Object Datas. THey generally store Arrays, Object literals, Dates, functions
+
+
+            //______________________PRIMITIVE_DATA_TYPES_____________________________________________ 
+
+            let stringdata = 'collaknow'
+            let numberdata = '13122005'
+            let nulldata = null
+            let undefineddata = undefined
+            let symboldata = null
+            let booleandata = true
+
+            console.log(typeof stringdata + ' is the data type of variable stringdata')
+            console.log(typeof numberdata + ' is the data type of variable numberdata')
+            console.log(typeof nulldata + ' is the data type of variable nulldata')
+            console.log(typeof undefineddata + ' is the data type of variable undefineddata')
+            console.log(typeof symboldata + ' is the data type of variable symboldata')
+            console.log(typeof booleandata + ' is the data type of variable booleandata')
+
+            //_________________________REFRENCE_DATA_TYPES___________________________________________
+
+            let arraydata = [
+                stringdata,
+                numberdata,
+                nulldata,
+                undefineddata,
+                symboldata,
+                booleandata,
+            ] // This is an array than contains the primitive datas in itself
+
+            let objectliteraldata = {
+                name: 'Lakshya',
+                age: 15,
+                gender: 'Male',
+            }
+
+            let datedata = new Date()
+
+            function functiondatatype() {
+                let primitivedatatypes = stringdata; numberdata; nulldata; undefineddata; symboldata; booleandata;  +  ' are primitive data types'
+
+                let referencedatatypes = arraydata; objectliteraldata; datedata; + ' are reference data types' 
+
+                console.log(primitivedatatypes)
+                console.log(referencedatatypes)
+
+            }
+
+
+            console.log(typeof arraydata + ' is the data type of the variable arraydata')
+            console.log(objectliteraldata)
+            console.log(typeof objectliteraldata + ' is the data type of the variable objectliteraldata')
+            functiondatatype() 
+
+        </script>
+    </body>
+</html>

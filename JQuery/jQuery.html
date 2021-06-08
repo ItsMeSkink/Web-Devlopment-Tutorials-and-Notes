@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>BODY 1</p>
+        <p>BODY 2</p>
+        <p>BODY 3</p>
+        <p>BODY 4</p>
+        <p>BODY 5</p>
+        <p>BODY 6</p>
+        <p>BODY 7</p>
+        <p>BODY 8</p>
+        <p>BODY 9</p>
+        <p>BODY 10</p>
+        <br>
+        <button>Click This Button</button>
+
+
+        <div contenteditable="true" id="Content" style="border: 2px solid red; outline: none;">
+        
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- There is also a way to include the Jquery library without downloading the actual code. You can include the 'cnd' from the internet (google/jquery/facebook.com). e.g. {<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> } -->
+    <script>
+        console.log($); // the '$' symbol is a shortcut that is used in jQuery that enables us to perform functions that require large code in JavaScript but are easily done in jQuery. also {'jQuery' == '$'}
+
+
+        // there is also a shortcut for document.ready() -> '$' <- just the dollar sign, nothing else
+
+        // $(document).ready(function () {
+        //     console.log('the document has been loaded and is completely ready')
+        //     console.log('the jquery would be executed now');
+        //     // this is generally used to prevent any error.
+
+        //     $('button').click(function () {
+        //         console.log('p and br is hidden')
+        //         $('p, br').hide() // this is a jQuery function which will hide the actual element
+
+        //     }) // this is -> 'onclick' event in JavaScript. In Jquery, it is shortened to just ->  $('_query_selector_').action() <-
+        //     let i = 0;
+        //     $('p').click(function () {
+        //         $(this).hide() // here the 'this' is a selector which signifies that the element which is clicked would be hidden.
+        //         console.log(this, 'is hidden')
+        //         console.log(++i)
+
+        //     })
+        // })
+
+        //___________________________________________________________________________________________
+
+        //There are three types of selectors in jQuery. They are the same as HTML and CSS.
+        // 1.  "Elements" (getElementByTag) -> $(element)
+        // 2. "#IDs" (getElementById) -> $(#id)
+        // 3. ".Classes" (getElementByClassName) -> $(.class)
+        // 4. "*" selects all Elements existing in the documents.
+
+
+       
+
+        $('button').click(
+            ()=> {
+                document.execCommand('bold', false, null)
+            }
+        )
+
+
+        setInterval(() => {
+            console.log(document.getElementById('div').innerHTML)
+        }, 1000);
+
+        // BASICALLY THE OBJECT IN THE PARENTHESIS IS THE TARGET TOWARDS ANY ELEMENT IN THE DOCUMENT -> ID, CLASS, TAG. 
+        // AFTER THE "." IT IS THE EVENT THAT WE NEED TO CALL.
+        // SOLE EVENT PERFORMS THE EVENT
+        // FUNCTION INSIDE THE EVENT, BRINGS A CALLBACK TELLING WHAT WOULD HAPPEN AFTER THE THE EVENT HAPPENS.
+
+
+
+    </script>
+</html>

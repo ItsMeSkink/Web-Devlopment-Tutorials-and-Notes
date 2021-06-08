@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <script>
+            // The Map function is used when we want each and everything in an array perform any function in ascending order of Array Index.
+
+            function x10(number) {
+                return number * 100
+            }
+
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            const iteratex100 = numbers.map(x10)
+
+
+            console.log(iteratex100)
+            // THIS WOULD PRINT ALL THE VALUES*100 IN AN ARRAY.
+
+            //___________________________________________________________________________________________
+
+            const name = [
+                { FirstName: 'Lakshya', MiddleName: 'Pratap', LastName: 'Monga' },
+                { FirstName: 'Tanmay', MiddleName: null, LastName: 'Garg' },
+                { FirstName: 'Shourya', MiddleName: null, LastName: 'Sethi' },
+                { FirstName: 'Manan', MiddleName: null, LastName: 'Sethi' },
+            ]
+
+            function printnames(names) {
+                const fullname = [names.FirstName, names.MiddleName, names.LastName]
+                const displaying_fullname = fullname.join(' ') // .join() will seperate the objects in the array (fullname) with whatever exists inside the parenthesis.
+                // in this case the fullname is an Array which has FirstName on Index 1, MiddleName on Index 2 and LastName on index 3. These array would be seperated by ' ' as specified in the parenthesis.
+                return displaying_fullname
+            }
+
+            console.log(name.map(printnames))
+
+            //___________________________________________________________________________________________
+        </script>
+    </body>
+</html>

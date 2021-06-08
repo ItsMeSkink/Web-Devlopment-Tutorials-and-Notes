@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Sample BlogSite</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+    function getRandomDarkColor() {
+      var letters = "0123456A";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+      }
+      return color;
+    }
+
+    for (let article = 0; article < $(".article").length; article++) {
+      $(".article")[article].style.backgroundImage = `linear-gradient( ${getRandomDarkColor()}, black)`;
+    }
+
+
+    function getRandomLightColor() {
+      var letters = '456BCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+      }
+      return color;
+    }
+
+
+    for (quarter = 0; quarter < $('.article').length; quarter++) {
+      $('.quarter')[quarter].style.backgroundColor = getRandomLightColor()
+
+    }
+
+    let articles = document.getElementsByClassName('article')
+
+    // $('.article #brief #content:first-child').addClass('major')
+    // $('.article #brief #content:first-child').removeClass('minor')
+    let articlenumber = articles.length
+    let i = 0;
+
+    if (window.innerWidth > 1220 + 20) {
+      $(window).on('wheel', (e) => {
+
+        const scroll = e.originalEvent.deltaY
+        if (scroll > 0) {
+          if (i < articlenumber - 1 || i == articlenumber && i > 0) {
+            ++i
+            $(articles[i]).addClass('major')
+            $(articles[i]).removeClass('minor')
+
+            $(articles[i - 1]).removeClass('major')
+            $(articles[i - 1]).addClass('minor')
+            $(articles[i - 1]).addClass('scrolled')
+          }
+        }
+
+        if (scroll < 0) {
+          if (i < articlenumber + 2 && i > 0) {
+            --i
+            $(articles[i + 1]).removeClass('major')
+            $(articles[i + 1]).addClass('minor')
+            // $(articles[i + 1]).addClass('toscroll')
+
+            $(articles[i]).addClass('major')
+            $(articles[i]).removeClass('minor')
+            $(articles[i + 1]).removeClass('scrolled')
+            $(articles[i]).removeClass('scrolled')
+          }
+        }
+      })
+
+    }
+
+    $('#commentsection ol').css('display', 'none')
+
+    $("#commentsection").click(()=> {
+      $('#commentsection ol').css('height', '300px')
+      $('#commentsection ol').css('display', 'inline-block')
+
+    })
+  </script>
+</html>

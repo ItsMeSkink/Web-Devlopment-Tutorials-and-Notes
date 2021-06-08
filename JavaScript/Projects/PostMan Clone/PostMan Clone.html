@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="PostMan Clone.css">
+    </head>
+    <body>
+        <div id="heading">
+            <header>PostMan Clone</header>
+        </div>
+
+        <span id="wholebody">
+            <span id="inputbody">
+
+                <form>
+                    <span id="url">
+                        <label for="urlInput">URL</label>
+                        <input type="text" name="urlInput" id="urlInput" value="https://my-json-server.typicode.com/typicode/demo/posts">
+                    </span>
+
+                    <br><br>
+
+                    <span id="contenttype">
+                        <label for="contenttype" id="contenttypelabel">Content-Type</label>
+                        <span id="ContentTypeRadio">
+                            <label for="JSONContentType">JSON</label>
+                            <input type="radio" name="ContentType" id="JSONContentType" value="JSON">
+
+                            <label for="CustomContentType">Custom</label>
+                            <input type="radio" name="ContentType" id="CustomContentType" value="CUSTOM" checked>
+                        </span>
+                    </span>
+
+                    <br><br>
+
+                    <span id="method">
+                        <label for="method">Method</label>
+                        <span id="MethodRadio">
+                            <label for="GetMethod">GET</label>
+                            <input type="radio" name="Method" id="GetMethod" value="GET" >
+                            <label for="PostMethod">POST</label>
+                            <input type="radio" name="Method" id="PostMethod" value="POST" >
+                        </span>
+                    </span>
+
+                    <br><br>
+
+                    <span id="jsoninput">
+                        <label for="jsoninput">Enter JSON Input</label> <br> <br>
+                        <textarea name="JsonContentInput" id="JsonContentInput" cols="90" rows="20"></textarea>
+                    </span>
+
+                    <br><br>
+
+                    <span id="custominput">
+                        <label for="custominput">Enter Custom Parameters</label>
+                        <span id="custominputtypespace">
+                            <span id="CustomInput">
+                                <span>
+                                    <input type="text" name="parameterName0" id="parameterName0" placeholder="Parameter Name">
+                                    <input type="text" name="parameterContent0" id="parameterContent0" placeholder="Parameter Content">
+                                </span>
+                            </span>
+
+                            <button type="button" id="addParameter">+</button>
+                        </span>
+                    </span>
+                    <span id="submitbutton">
+                        <button type="button" id="SubmitButton">SUBMIT</button>
+                    </span>
+                </form>
+
+            </span>
+
+            <span id="outputbody">
+                <span id="OutputBody">
+                    <textarea name="Output" id="Output" cols="120" rows="40"></textarea>
+                </span>
+                <a href="/PostMan Clone.html">HOME</a>
+            </span>
+        </span>
+
+        <script src="PostMan Clone.js"></script>
+    </body>
+</html>

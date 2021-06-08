@@ -1,0 +1,38 @@
+.bo {
+    border: 4px solid magenta;
+    width: 150px;
+    height: 150px;
+    margin: 4px;
+    display: inline-block;
+}
+
+
+/*there are different values under postions.
+1) Static - Default
+2) Absolute - Overlap over the parent
+3) Relative - Relative to its normal postion
+4) Fixed
+5) Sticky */
+
+#con {
+    border: rgb(23, 209, 63);
+    background-color: darkkhaki;
+    margin: 30px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#box1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#box2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 40px;
+    padding: 40px;
+    /* not working!! */
+}

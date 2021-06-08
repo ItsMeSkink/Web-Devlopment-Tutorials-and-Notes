@@ -1,0 +1,27 @@
+/* Introdcution to CSS */
+
+
+/* the basic syntax is as follow:
+selector {property:value;} */
+
+
+/* for example ->  span {colour:red;}
+this will define that all the text under span would be of colour red*/
+
+
+/* To define multpiple properties to multiple selectors, follow:
+selector 1, selector 2 {
+    property 1: value 1;
+    property 2: value 2;
+}*/
+
+
+/* div {
+    color: yellow;
+    background-color: teal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+} */
+
+
+/* The whole text under div tag would follow the properties given under this selector */

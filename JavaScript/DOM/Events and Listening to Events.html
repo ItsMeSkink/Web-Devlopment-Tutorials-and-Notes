@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Some example of Events:
+    Click -> This is what happens on lef click
+    context menu -> This is what happens on right Click
+    mouseover/mouseout -> This is to what happens when the cursor comes out of an element
+    mousedown/mouseup -> When clicked or hovered
+    mousemove -> ?
+
+    submit -> submit a form
+    focus -> when an input is focussed in the form
+
+    DOMContentLoaded
+
+    transitionend -->
+
+
+        <div class="container">
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto repellat dolores unde sit temporibus. Dignissimos dolorum optio, voluptatibus magnam obcaecati ipsa, enim animi pariatur consequuntur earum cum dolorem porro expedita repellat. Cumque, quo magnam veniam facere ipsam doloribus illum voluptatem inventore, blanditiis autem placeat magni expedita repellat exercitationem! Laudantium magni facere earum distinctio cum adipisci dolorum corporis? Odit molestiae, perferendis quos explicabo a sed necessitatibus modi, recusandae at incidunt ipsum odio vel itaque consequuntur rem ex deleniti! Doloribus, neque. Totam aperiam vero error nihil ducimus fugit? Tempora magni dignissimos praesentium corrupti reiciendis. Maiores libero doloremque voluptate itaque quod ad sapiente.</p>
+        </div>
+
+        <button id="btn" onclick="Thide()">Show/Hide</button>
+
+
+
+        <script>
+            function Thide() {
+                let para = document.getElementById("para")
+
+                if (para.style.display != 'none') {
+                    para.style.display = 'none'
+                }
+
+                else {
+                    para.style.display = 'block';
+
+                }
+                // here the para represents the variable for ID "para" and stlye represents CSS and display represent the display property. and the "none" and "block" represents its value 
+            }
+
+            let para = document.getElementById("para");
+
+            para.addEventListener('mouseover', function run() {
+                // this eliminates the need of mentioning the function in the HTML
+                console.log('Mouse inside the p')
+            })
+            para.addEventListener('mouseout', function run1() {
+                // this eliminates the need of mentioning the function in the HTML
+                console.log('Mouse outside the p')
+            })
+        </script>
+    </body>
+</html>
